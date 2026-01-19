@@ -85,8 +85,17 @@
             h2{font-size:20px}
             h3{font-size:18px}
             
-            /* 移动端hero区域优化 */
-            .wp-block-cover__inner-container{
+            /* 减少所有区域的padding */
+            .wp-block-group{padding-top:40px!important;padding-bottom:40px!important}
+            
+            /* Hero区域 - 去掉min-height和多余空间 */
+            main > .wp-block-group:first-child .wp-block-cover{
+                min-height:auto!important;
+                padding:0!important;
+            }
+            
+            /* Hero内容区 - 金属背景 */
+            main > .wp-block-group:first-child .wp-block-cover__inner-container{
                 background:linear-gradient(135deg,#2c3e50 0%,#34495e 50%,#2c3e50 100%)!important;
                 background-image:
                     linear-gradient(45deg,rgba(255,255,255,0.03) 25%,transparent 25%),
@@ -97,18 +106,17 @@
                 background-size:20px 20px,20px 20px,20px 20px,20px 20px,100% 100%!important;
                 background-position:0 0,10px 0,10px -10px,0 10px,0 0!important;
                 box-shadow:inset 0 1px 0 rgba(255,255,255,0.1),inset 0 -1px 0 rgba(0,0,0,0.2)!important;
-                position:relative!important;
-                padding-top:60px!important;
+                padding:40px 20px!important;
             }
             
-            /* 大厅图片向上移动,落在大桥中央 */
-            .wp-block-cover__inner-container .wp-block-image{
-                margin-top:-120px!important;
-                margin-bottom:40px!important;
+            /* 大厅图片向上移动 */
+            main > .wp-block-group:first-child .wp-block-cover__inner-container .wp-block-image{
+                margin-top:-100px!important;
+                margin-bottom:30px!important;
                 width:90%!important;
                 max-width:90%!important;
             }
-            .wp-block-cover__inner-container .wp-block-image img{
+            main > .wp-block-group:first-child .wp-block-cover__inner-container .wp-block-image img{
                 width:100%!important;
                 max-width:100%!important;
                 height:auto!important;
@@ -117,19 +125,21 @@
                 box-shadow:0 10px 30px rgba(0,0,0,0.3)!important;
             }
             
-            /* 文字颜色协调金属背景 */
-            .wp-block-cover__inner-container h6,
-            .wp-block-cover__inner-container h2{
+            /* 文字颜色 */
+            main > .wp-block-group:first-child .wp-block-cover__inner-container h6,
+            main > .wp-block-group:first-child .wp-block-cover__inner-container h2{
                 color:#fff!important;
                 text-shadow:0 2px 4px rgba(0,0,0,0.3)!important;
             }
-            .wp-block-cover__inner-container h6{
+            main > .wp-block-group:first-child .wp-block-cover__inner-container h6{
                 font-size:14px!important;
                 opacity:0.95!important;
+                margin-bottom:15px!important;
             }
-            .wp-block-cover__inner-container h2{
+            main > .wp-block-group:first-child .wp-block-cover__inner-container h2{
                 font-size:18px!important;
                 font-weight:600!important;
+                margin-bottom:0!important;
             }
         }
     </style>
