@@ -1,0 +1,64 @@
+baseURL = "https://hsq66.github.io/yuhang/"
+languageCode = "zh-CN"
+title = "广东宇航金属制品有限公司"
+theme = "yuhang"
+
+[params]
+  description = "专业钣金加工、精密钣金制造、金属冲压、激光切割、钣金折弯、焊接加工服务"
+  keywords = "钣金加工,精密钣金,金属加工,钣金制造,激光切割,钣金折弯,金属冲压,钣金焊接,钣金定制,广东钣金,宇航金属"
+  author = "广东宇航金属制品有限公司"
+  
+  # 联系信息
+  email = "info@example.com"
+  phone = "+86 0123456789"
+  address = "广东省 某某市 某某区"
+  
+  # 社交媒体
+  [params.social]
+    facebook = "#"
+    twitter = "#"
+    instagram = "#"
+    linkedin = "#"
+
+# 菜单配置
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "公司介绍"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "产品介绍"
+    url = "/products/"
+    weight = 3
+  [[menu.main]]
+    name = "生产车间"
+    url = "/workshop/"
+    weight = 4
+  [[menu.main]]
+    name = "公司文化"
+    url = "/culture/"
+    weight = 5
+  [[menu.main]]
+    name = "联系我们"
+    url = "/contact/"
+    weight = 6
+
+# 输出格式
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Markdown配置
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+# 构建配置
+[build]
+  writeStats = true

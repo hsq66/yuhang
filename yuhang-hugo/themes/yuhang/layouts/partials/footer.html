@@ -1,0 +1,78 @@
+<!-- Footer -->
+<div class="wp-block-group alignfull has-base-color has-custom-color-5-background-color has-text-color has-background has-link-color" id="footer" style="padding-top:60px;padding-right:20px;padding-left:20px">
+    
+    <!-- 联系信息区域 -->
+    <div class="wp-block-group alignwide" style="margin-bottom:60px;padding-bottom:20px">
+        <div class="wp-block-group alignwide">
+            <div class="wp-block-group">
+                <div class="wp-block-group">
+                    <p>发送邮件</p>
+                    <p style="font-size:18px"><strong>{{ .Site.Params.email }}</strong></p>
+                </div>
+            </div>
+
+            <div class="wp-block-group">
+                <div class="wp-block-group">
+                    <p>随时致电</p>
+                    <p style="font-size:18px"><strong>{{ .Site.Params.phone }}</strong></p>
+                </div>
+            </div>
+
+            <div class="wp-block-group">
+                <div class="wp-block-group">
+                    <p>我们的办公室</p>
+                    <p style="font-size:18px"><strong>{{ .Site.Params.address }}</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚链接区域 -->
+    <div class="wp-block-columns alignwide">
+        <div class="wp-block-column">
+            <div class="wp-block-group">
+                <p style="font-size:20px"><strong>快速链接</strong></p>
+                {{ range .Site.Menus.main }}
+                <p><a href="{{ .URL }}">{{ .Name }}</a></p>
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="wp-block-column">
+            <div class="wp-block-group">
+                <p style="font-size:20px"><strong>产品服务</strong></p>
+                <p><a href="/products/">钣金加工</a></p>
+                <p><a href="/products/">激光切割</a></p>
+                <p><a href="/products/">金属冲压</a></p>
+                <p><a href="/products/">焊接加工</a></p>
+            </div>
+        </div>
+
+        <div class="wp-block-column">
+            <div class="wp-block-group">
+                <p style="font-size:20px"><strong>支持</strong></p>
+                <p><a href="/about/">案例研究</a></p>
+                <p><a href="/contact/">常见问题</a></p>
+                <p><a href="/about/">客户评价</a></p>
+                <p><a href="/contact/">招聘信息</a></p>
+            </div>
+        </div>
+
+        <div class="wp-block-column">
+            <div class="wp-block-group">
+                <p style="font-size:20px"><strong>关于我们</strong></p>
+                <p><a href="/about/">公司简介</a></p>
+                <p><a href="/culture/">企业文化</a></p>
+                <p><a href="/workshop/">生产车间</a></p>
+                <p><a href="/contact/">联系方式</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 版权信息 -->
+    <div class="wp-block-group alignfull has-custom-dark-background-color has-background">
+        <div class="wp-block-group alignwide" style="border-top-color:var(--wp--preset--color--custom-light);border-top-width:1px;margin-top:40px;padding-top:16px;padding-bottom:16px">
+            <p class="has-text-align-center" style="font-size:15px">Copyright @ 2026 {{ .Site.Title }}, All Rights Reserved</p>
+        </div>
+    </div>
+</div>

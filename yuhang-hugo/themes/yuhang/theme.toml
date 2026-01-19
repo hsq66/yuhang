@@ -1,0 +1,12 @@
+name = "Yuhang Theme"
+license = "MIT"
+licenselink = "https://github.com/hsq66/yuhang/blob/main/LICENSE"
+description = "广东宇航金属制品有限公司官方网站主题"
+homepage = "https://github.com/hsq66/yuhang"
+tags = ["company", "business", "manufacturing", "responsive"]
+features = ["responsive", "seo-optimized", "mobile-friendly"]
+min_version = "0.120.0"
+
+[author]
+  name = "hsq66"
+  homepage = "https://github.com/hsq66"

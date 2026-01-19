@@ -1,0 +1,38 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+
+<!-- 页面标题 -->
+<div class="wp-block-group alignfull" style="padding:60px 20px 40px;background:linear-gradient(135deg, #091057 0%, #024caa 100%);">
+    <div class="wp-block-group alignwide">
+        <h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;margin-bottom:20px;">{{ .Title }}</h1>
+        <p class="has-text-align-center" style="color:rgba(255,255,255,0.9);">{{ .Date.Format "2006年01月02日" }}</p>
+    </div>
+</div>
+
+<!-- 页面内容 -->
+<div class="wp-block-group alignfull" style="padding:60px 20px;">
+    <div class="wp-block-group alignwide" style="max-width:900px;margin:0 auto;">
+        <article class="content">
+            {{ .Content }}
+        </article>
+    </div>
+</div>
+
+<!-- 相关链接 -->
+<div class="wp-block-group alignfull" style="padding:40px 20px;background:#f9fafb;">
+    <div class="wp-block-group alignwide">
+        <h3 class="wp-block-heading has-text-align-center" style="margin-bottom:30px;">相关页面</h3>
+        <div class="wp-block-buttons" style="justify-content:center;">
+            {{ range .Site.Menus.main }}
+            {{ if ne $.RelPermalink .URL }}
+            <div class="wp-block-button is-style-outline">
+                <a class="wp-block-button__link wp-element-button" href="{{ .URL }}">{{ .Name }}</a>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{ end }}
