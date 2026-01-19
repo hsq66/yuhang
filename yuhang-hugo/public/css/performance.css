@@ -1,0 +1,315 @@
+/*
+ * 性能优化CSS - 平衡性能与美观
+ * 保持专业视觉效果的同时提升加载速度
+ */
+
+/* ========================================
+   GPU加速 - 保持动画流畅
+   ======================================== */
+
+.wp-block-button__link,
+.wp-element-button,
+.img-hover-zoom img,
+.back-to-top {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* ========================================
+   字体优化 - 快速显示文字
+   ======================================== */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* 字体加载优化 */
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-display: swap;
+}
+
+/* ========================================
+   图片优化 - 防止布局偏移
+   ======================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 懒加载占位符 - 保持优雅 */
+img[loading="lazy"] {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* ========================================
+   动画性能优化 - 保持视觉效果
+   ======================================== */
+
+/* 图片悬停效果 - 保持但优化 */
+.img-hover-zoom img {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.05) translateZ(0);
+}
+
+/* 按钮过渡 - 保持专业感 */
+.wp-block-button__link,
+.wp-element-button,
+.wpcf7-submit {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 链接悬停 - 保持交互反馈 */
+a {
+    transition: color 0.2s ease;
+}
+
+/* ========================================
+   阴影优化 - 保持深度感
+   ======================================== */
+
+/* 卡片阴影 - 保持专业外观 */
+.product-showcase,
+.service-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-showcase:hover,
+.service-card:hover {
+    box-shadow: 0 8px 24px rgba(9, 16, 87, 0.12);
+    transform: translateY(-4px);
+}
+
+/* 按钮阴影 */
+.wp-block-button__link,
+.back-to-top {
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.wp-block-button__link:hover,
+.back-to-top:hover {
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
+}
+
+/* ========================================
+   滚动性能 - 保持平滑
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 尊重用户偏好 */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   内容可见性优化 - 提升长页面性能
+   ======================================== */
+
+.wp-block-post-template > * {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 400px;
+}
+
+/* ========================================
+   移动端优化 - 保持流畅体验
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* 简化动画但保持效果 */
+    .img-hover-zoom img {
+        transition: transform 0.2s ease;
+    }
+    
+    /* 移动端禁用悬停效果 */
+    .img-hover-zoom:hover img {
+        transform: none;
+    }
+    
+    /* 优化阴影 */
+    .product-showcase,
+    .service-card {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* ========================================
+   渐变优化 - 保持视觉吸引力
+   ======================================== */
+
+.gradient-bg {
+    background: linear-gradient(135deg, #091057 0%, #024caa 100%);
+}
+
+.quality-badge {
+    background: linear-gradient(135deg, #091057 0%, #024caa 100%);
+}
+
+/* ========================================
+   表单优化 - 保持专业外观
+   ======================================== */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #024caa;
+    box-shadow: 0 0 0 3px rgba(2, 76, 170, 0.1);
+    transition: all 0.2s ease;
+}
+
+/* ========================================
+   网格布局优化
+   ======================================== */
+
+.wrap-the-columns {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* ========================================
+   打印优化
+   ======================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    .no-print,
+    #header,
+    #footer,
+    .wp-block-navigation,
+    .back-to-top {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   专业视觉增强
+   ======================================== */
+
+/* 微妙的页面进入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wp-block-group {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* 按钮点击反馈 */
+.wp-block-button__link:active,
+.wp-element-button:active {
+    transform: scale(0.98);
+}
+
+/* 卡片边框光泽效果 */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #024caa, #f59e0b);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* ========================================
+   性能监控提示
+   ======================================== */
+
+/* 开发环境性能提示 */
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* ========================================
+   关键CSS优先级
+   ======================================== */
+
+/* 确保首屏快速渲染 */
+#header {
+    position: relative;
+    z-index: 100;
+}
+
+.wp-site-blocks {
+    overflow-x: hidden;
+}
+
+/* ========================================
+   字体回退优化
+   ======================================== */
+
+body {
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
