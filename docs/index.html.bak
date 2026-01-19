@@ -30,84 +30,27 @@
         /* 关键CSS - 首屏立即渲染 */
         *{box-sizing:border-box}
         body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;color:#1a1a1a;background:#fff;opacity:1}
-        #header{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.04);position:sticky;top:0;z-index:1000;padding:12px 40px!important;transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1)}
-        #header.scrolled{padding:6px 40px!important;box-shadow:0 4px 20px rgba(0,0,0,.1);backdrop-filter:blur(10px);background:rgba(255,255,255,0.95)}
-        #header .wens-prova-nav{padding-top:4px!important;padding-bottom:4px!important;transition:all 0.3s ease}
-        #header.scrolled .wens-prova-nav{padding-top:2px!important;padding-bottom:2px!important}
-        .mobile-disable.has-custom-color-1-background-color{background:#091057!important;transition:all 0.3s ease}
-        #header.scrolled .mobile-disable.has-custom-color-1-background-color{opacity:0.95}
+        #header{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06);position:sticky;top:0;z-index:1000;padding:4px 40px 4px 40px!important}
+        #header .wens-prova-nav{padding-top:4px!important;padding-bottom:4px!important}
+        .mobile-disable.has-custom-color-1-background-color{background:#091057!important}
         .mobile-disable.has-custom-color-1-background-color p,.mobile-disable.has-custom-color-1-background-color strong,.mobile-disable.has-custom-color-1-background-color a{color:#fff!important}
         img{max-width:100%;height:auto;display:block;opacity:1}
-        .wp-block-button__link{background:linear-gradient(135deg,#024caa 0%,#091057 100%);color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;display:inline-block;border:none;transition:all 0.3s ease}
-        .wp-block-button__link:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(2,76,170,0.3)}
+        .wp-block-button__link{background:linear-gradient(135deg,#024caa 0%,#091057 100%);color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;display:inline-block;border:none}
         h1,h2,h3{color:#091057;margin:0 0 16px;font-weight:700}
         p{color:#4a4a4a;line-height:1.8;margin:0 0 16px}
-        a{color:#024caa;text-decoration:none;transition:color 0.2s ease}
-        a:hover{color:#091057}
+        a{color:#024caa;text-decoration:none}
         .wp-block-group{margin:0 0 16px;padding:24px 20px;opacity:1}
         .wp-block-group img{max-width:100%;width:100%;height:auto}
         #footer{background:#091057;color:#fff}
         #footer *{color:rgba(255,255,255,.9)!important}
-        
-        /* 移动端菜单样式 */
-        .mobile-menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;z-index:1001;position:relative}
-        .mobile-menu-toggle span{display:block;width:24px;height:2px;background:#091057;margin:5px 0;transition:all 0.3s ease;border-radius:2px}
-        .mobile-menu-toggle.active span:nth-child(1){transform:rotate(45deg) translate(6px, 6px)}
-        .mobile-menu-toggle.active span:nth-child(2){opacity:0}
-        .mobile-menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(6px, -6px)}
-        
         @media(max-width:768px){
-            body{font-size:15px;line-height:1.6}
-            #header{padding:10px 16px!important}
-            #header.scrolled{padding:8px 16px!important}
-            #header .wens-prova-nav{padding-top:3px!important;padding-bottom:3px!important;display:flex!important;justify-content:space-between!important;align-items:center!important}
-            #header.scrolled .wens-prova-nav{padding-top:2px!important;padding-bottom:2px!important}
-            .mobile-disable{display:none!important}
-            
-            /* 移动端菜单按钮显示 */
-            .mobile-menu-toggle{display:block}
-            
-            /* 隐藏桌面端导航 */
-            .wp-block-navigation{display:none!important}
-            .wp-block-buttons{display:none!important}
-            
-            /* 移动端菜单容器 */
-            .mobile-menu-container{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:#fff;box-shadow:-4px 0 20px rgba(0,0,0,0.1);transition:right 0.3s cubic-bezier(0.4, 0, 0.2, 1);z-index:1000;padding:80px 24px 24px;overflow-y:auto}
-            .mobile-menu-container.active{right:0}
-            .mobile-menu-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);opacity:0;visibility:hidden;transition:all 0.3s ease;z-index:999}
-            .mobile-menu-overlay.active{opacity:1;visibility:visible}
-            
-            /* 移动端菜单项 */
-            .mobile-menu-nav{list-style:none;padding:0;margin:0}
-            .mobile-menu-nav li{margin-bottom:8px}
-            .mobile-menu-nav a{display:block;padding:14px 16px;color:#1a1a1a;font-size:16px;font-weight:500;border-radius:8px;transition:all 0.2s ease}
-            .mobile-menu-nav a:hover,.mobile-menu-nav a.active{background:#f0f4ff;color:#024caa}
-            .mobile-menu-cta{margin-top:24px;padding-top:24px;border-top:1px solid #e5e7eb}
-            .mobile-menu-cta .wp-block-button__link{width:100%;text-align:center;display:block;padding:14px 24px!important;font-size:16px!important}
-            
-            h1{font-size:24px!important;line-height:1.3!important;margin-bottom:12px!important}
-            h2{font-size:22px!important;line-height:1.3!important;margin-bottom:12px!important}
-            h3{font-size:18px!important;line-height:1.4!important;margin-bottom:10px!important}
-            p{font-size:15px!important;line-height:1.7!important;margin-bottom:12px!important}
-            .wp-block-group{padding:16px 16px!important;margin:0 0 12px!important}
-            .wp-block-cover{min-height:500px!important}
-            .wp-block-cover__inner-container{padding:20px 16px!important}
-            .wp-block-button__link{padding:12px 24px!important;font-size:15px!important;border-radius:8px!important}
-            .wp-block-columns{flex-direction:column!important}
-            .wp-block-column{width:100%!important;margin-bottom:16px!important}
-            img{border-radius:8px;margin-bottom:12px}
-            .has-text-align-center{text-align:left!important}
-            #footer{padding:24px 16px!important}
-            #footer p{font-size:13px!important}
-        }
-        @media(max-width:480px){
-            body{font-size:14px}
-            h1{font-size:22px!important}
-            h2{font-size:20px!important}
-            h3{font-size:17px!important}
-            .wp-block-cover{min-height:400px!important}
-            .wp-block-button__link{padding:10px 20px!important;font-size:14px!important}
-            .mobile-menu-container{width:100%;right:-100%}
+            body{font-size:16px}
+            #header{padding:4px 10px 4px 10px!important}
+            #header .wens-prova-nav{padding-top:2px!important;padding-bottom:2px!important}
+            h1{font-size:28px!important}
+            h2{font-size:24px!important}
+            h3{font-size:20px!important}
+            .wp-block-group{padding:20px 16px!important;margin:0 0 12px!important}
         }
     </style>
     <title>广东宇航金属制品有限公司 &#8211; 专业钣金加工制造 | 精密钣金 | 激光切割 | 金属冲压</title>
@@ -544,10 +487,7 @@ margin-bottom:16px;
 
 <div class="wp-block-group alignwide has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
 <div class="wp-block-group alignfull wens-prova-nav is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-b585a4aa wp-block-group-is-layout-flex">
-<div class="wp-block-group wens-prova-nav is-layout-flex wp-container-core-group-is-layout-fbcf6490 wp-block-group-is-layout-flex"><div class="wp-block-site-logo"><a href="https://yuhang2023.com/" class="custom-logo-link" rel="home" aria-current="page"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.webp" type="image/webp">
-    <img width="51" height="51" src="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.png" class="custom-logo" alt="宇航金属制品有限公司" decoding="async" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-300x300.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-150x150.png 150w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-768x768.png 768w" sizes="(max-width: 51px) 100vw, 51px" />
-</picture></a></div>
+<div class="wp-block-group wens-prova-nav is-layout-flex wp-container-core-group-is-layout-fbcf6490 wp-block-group-is-layout-flex"><div class="wp-block-site-logo"><a href="https://yuhang2023.com/" class="custom-logo-link" rel="home" aria-current="page"><img width="51" height="51" src="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.png" class="custom-logo" alt="宇航金属制品有限公司" decoding="async" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-300x300.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-150x150.png 150w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-768x768.png 768w" sizes="(max-width: 51px) 100vw, 51px" /></a></div>
 
 <h1 class="wp-block-site-title has-medium-font-size"><a href="https://yuhang2023.com" target="_self" rel="home" aria-current="page">宇航金属制品有限公司</a></h1></div>
 
@@ -593,14 +533,8 @@ margin-bottom:16px;
 
 <main class="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-19e250f3 wp-block-group-is-layout-constrained">
 <div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<div class="wp-block-cover alignfull" style="min-height:678px;aspect-ratio:unset;"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片2.webp" type="image/webp">
-    <img width="793" height="720" class="wp-block-cover__image-background wp-image-219 size-full" alt="" src="https://yuhang2023.com/wp-content/uploads/2025/12/图片2.jpg" data-object-fit="cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片2.jpg 793w, https://yuhang2023.com/wp-content/uploads/2025/12/图片2-300x272.jpg 300w, https://yuhang2023.com/wp-content/uploads/2025/12/图片2-768x697.jpg 768w" sizes="(max-width: 793px) 100vw, 793px" />
-</picture><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-20 has-background-dim"></span><div class="wp-block-cover__inner-container has-global-padding is-layout-constrained wp-block-cover-is-layout-constrained">
-<figure class="wp-block-image aligncenter size-large is-resized"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-1024x687.webp" type="image/webp">
-    <img width="1024" height="687" src="https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-1024x687.png" alt="" class="wp-image-508" style="aspect-ratio:1.490567502523096;width:703px;height:auto" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-1024x687.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-300x201.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-768x515.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116.png 1264w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<div class="wp-block-cover alignfull" style="min-height:678px;aspect-ratio:unset;"><img width="793" height="720" class="wp-block-cover__image-background wp-image-219 size-full" alt="" src="https://yuhang2023.com/wp-content/uploads/2025/12/图片2.jpg" data-object-fit="cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片2.jpg 793w, https://yuhang2023.com/wp-content/uploads/2025/12/图片2-300x272.jpg 300w, https://yuhang2023.com/wp-content/uploads/2025/12/图片2-768x697.jpg 768w" sizes="(max-width: 793px) 100vw, 793px" /><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-20 has-background-dim"></span><div class="wp-block-cover__inner-container has-global-padding is-layout-constrained wp-block-cover-is-layout-constrained">
+<figure class="wp-block-image aligncenter size-large is-resized"><img width="1024" height="687" src="https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-1024x687.png" alt="" class="wp-image-508" style="aspect-ratio:1.490567502523096;width:703px;height:auto" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-1024x687.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-300x201.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116-768x515.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/HOTimage_1764985786518116.png 1264w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -618,10 +552,7 @@ margin-bottom:16px;
 <div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-c030573d wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:45%">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<figure class="wp-block-image size-full has-custom-border"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-scaled.webp" type="image/webp">
-    <img width="2560" height="1439" src="https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-scaled.png" alt="" class="wp-image-512" style="border-radius:10px;aspect-ratio:1;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-scaled.png 2560w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-300x169.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-1024x576.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-768x432.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-1536x864.png 1536w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-2048x1152.png 2048w" sizes="(max-width: 2560px) 100vw, 2560px" />
-</picture></figure>
+<figure class="wp-block-image size-full has-custom-border"><img width="2560" height="1439" src="https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-scaled.png" alt="" class="wp-image-512" style="border-radius:10px;aspect-ratio:1;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-scaled.png 2560w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-300x169.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-1024x576.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-768x432.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-1536x864.png 1536w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区3-2048x1152.png 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></figure>
 </div>
 </div>
 
@@ -671,10 +602,7 @@ margin-bottom:16px;
 <div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
 <div class="wp-block-group has-border-color has-custom-color-2-border-color has-base-background-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-19e250f3 wp-block-group-is-layout-constrained" style="border-style:dashed;border-width:1px;border-radius:10px">
-<figure class="wp-block-image size-large has-custom-border"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-1024x518.webp" type="image/webp">
-    <img width="1024" height="518" src="https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-1024x518.png" alt="" class="wp-image-516" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-1024x518.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-300x152.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-768x388.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区2.png 1456w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large has-custom-border"><img width="1024" height="518" src="https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-1024x518.png" alt="" class="wp-image-516" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-1024x518.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-300x152.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区2-768x388.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/厂区2.png 1456w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -706,10 +634,7 @@ margin-bottom:16px;
 
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
 <div class="wp-block-group has-border-color has-custom-color-2-border-color has-base-background-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-19e250f3 wp-block-group-is-layout-constrained" style="border-style:dashed;border-width:1px;border-radius:10px">
-<figure class="wp-block-image size-large has-custom-border"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-1024x572.webp" type="image/webp">
-    <img width="1024" height="572" src="https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-1024x572.png" alt="" class="wp-image-518" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-1024x572.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-300x167.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-768x429.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/PRO01.png 1376w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large has-custom-border"><img width="1024" height="572" src="https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-1024x572.png" alt="" class="wp-image-518" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-1024x572.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-300x167.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/PRO01-768x429.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/PRO01.png 1376w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -741,10 +666,7 @@ margin-bottom:16px;
 
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
 <div class="wp-block-group has-border-color has-custom-color-2-border-color has-base-background-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-19e250f3 wp-block-group-is-layout-constrained" style="border-style:dashed;border-width:1px;border-radius:10px">
-<figure class="wp-block-image size-large has-custom-border"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-1024x559.webp" type="image/webp">
-    <img width="1024" height="559" src="https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-1024x559.png" alt="" class="wp-image-520" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-1024x559.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-300x164.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-768x419.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/Person-1.png 1408w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large has-custom-border"><img width="1024" height="559" src="https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-1024x559.png" alt="" class="wp-image-520" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-1024x559.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-300x164.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/Person-1-768x419.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/Person-1.png 1408w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -799,10 +721,7 @@ margin-bottom:16px;
 
 
 
-<figure class="wp-block-image size-large"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-1024x559.webp" type="image/webp">
-    <img width="1024" height="559" src="https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-1024x559.png" alt="" class="wp-image-524" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-1024x559.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-300x164.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-768x419.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055.png 1408w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large"><img width="1024" height="559" src="https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-1024x559.png" alt="" class="wp-image-524" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-1024x559.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-300x164.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055-768x419.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/SOLOCAimage_1764993851019055.png 1408w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 </div>
 
 
@@ -821,10 +740,7 @@ margin-bottom:16px;
 
 
 <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large has-custom-border"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/p01-1008x1024.webp" type="image/webp">
-    <img width="1008" height="1024" src="https://yuhang2023.com/wp-content/uploads/2025/12/p01-1008x1024.png" alt="" class="wp-image-523" style="border-radius:20px;aspect-ratio:3/4;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/p01-1008x1024.png 1008w, https://yuhang2023.com/wp-content/uploads/2025/12/p01-295x300.png 295w, https://yuhang2023.com/wp-content/uploads/2025/12/p01-768x780.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/p01.png 1024w" sizes="(max-width: 1008px) 100vw, 1008px" />
-</picture></figure>
+<figure class="wp-block-image size-large has-custom-border"><img width="1008" height="1024" src="https://yuhang2023.com/wp-content/uploads/2025/12/p01-1008x1024.png" alt="" class="wp-image-523" style="border-radius:20px;aspect-ratio:3/4;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/p01-1008x1024.png 1008w, https://yuhang2023.com/wp-content/uploads/2025/12/p01-295x300.png 295w, https://yuhang2023.com/wp-content/uploads/2025/12/p01-768x780.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/p01.png 1024w" sizes="(max-width: 1008px) 100vw, 1008px" /></figure>
 </div>
 
 
@@ -866,10 +782,7 @@ margin-bottom:16px;
 <div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
 <div class="wp-block-group has-border-color has-custom-color-2-border-color has-base-background-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-19e250f3 wp-block-group-is-layout-constrained" style="border-style:dashed;border-width:1px;border-radius:10px">
-<figure class="wp-block-image size-large has-custom-border"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P14-1024x590.webp" type="image/webp">
-    <img width="1024" height="590" src="https://yuhang2023.com/wp-content/uploads/2025/12/P14-1024x590.png" alt="" class="wp-image-529" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P14-1024x590.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P14-300x173.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P14-768x443.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P14.png 1360w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large has-custom-border"><img width="1024" height="590" src="https://yuhang2023.com/wp-content/uploads/2025/12/P14-1024x590.png" alt="" class="wp-image-529" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P14-1024x590.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P14-300x173.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P14-768x443.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P14.png 1360w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -897,10 +810,7 @@ margin-bottom:16px;
 
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
 <div class="wp-block-group has-border-color has-custom-color-2-border-color has-base-background-color has-background has-global-padding is-layout-constrained wp-container-core-group-is-layout-19e250f3 wp-block-group-is-layout-constrained" style="border-style:dashed;border-width:1px;border-radius:10px">
-<figure class="wp-block-image size-large has-custom-border"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P16-1024x751.webp" type="image/webp">
-    <img width="1024" height="751" src="https://yuhang2023.com/wp-content/uploads/2025/12/P16-1024x751.png" alt="" class="wp-image-530" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P16-1024x751.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P16-300x220.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P16-768x563.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P16.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large has-custom-border"><img width="1024" height="751" src="https://yuhang2023.com/wp-content/uploads/2025/12/P16-1024x751.png" alt="" class="wp-image-530" style="border-top-left-radius:10px;border-top-right-radius:10px;aspect-ratio:16/9;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P16-1024x751.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P16-300x220.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P16-768x563.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P16.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
 
 
@@ -951,10 +861,7 @@ margin-bottom:16px;
 
 
 
-<figure class="wp-block-image size-large"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P9-1024x657.webp" type="image/webp">
-    <img width="1024" height="657" src="https://yuhang2023.com/wp-content/uploads/2025/12/P9-1024x657.png" alt="" class="wp-image-534" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P9-1024x657.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P9-300x193.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P9-768x493.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P9.png 1296w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large"><img width="1024" height="657" src="https://yuhang2023.com/wp-content/uploads/2025/12/P9-1024x657.png" alt="" class="wp-image-534" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P9-1024x657.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P9-300x193.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P9-768x493.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P9.png 1296w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 </div>
 
 
@@ -964,10 +871,7 @@ margin-bottom:16px;
 
 
 
-<figure class="wp-block-image size-large"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P10-1024x674.webp" type="image/webp">
-    <img width="1024" height="674" src="https://yuhang2023.com/wp-content/uploads/2025/12/P10-1024x674.png" alt="" class="wp-image-535" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P10-1024x674.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P10-300x197.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P10-768x506.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P10.png 1264w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large"><img width="1024" height="674" src="https://yuhang2023.com/wp-content/uploads/2025/12/P10-1024x674.png" alt="" class="wp-image-535" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P10-1024x674.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P10-300x197.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P10-768x506.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P10.png 1264w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 </div>
 
 
@@ -980,10 +884,7 @@ margin-bottom:16px;
 
 
 
-<figure class="wp-block-image size-large has-custom-border"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P8-1024x687.webp" type="image/webp">
-    <img width="1024" height="687" src="https://yuhang2023.com/wp-content/uploads/2025/12/P8-1024x687.png" alt="" class="wp-image-532" style="border-radius:20px;aspect-ratio:3/4;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P8-1024x687.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P8-300x201.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P8-768x515.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P8.png 1264w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large has-custom-border"><img width="1024" height="687" src="https://yuhang2023.com/wp-content/uploads/2025/12/P8-1024x687.png" alt="" class="wp-image-532" style="border-radius:20px;aspect-ratio:3/4;object-fit:cover" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P8-1024x687.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P8-300x201.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P8-768x515.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P8.png 1264w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 </div>
 
 
@@ -994,10 +895,7 @@ margin-bottom:16px;
 
 
 
-<figure class="wp-block-image size-large"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P11-1024x751.webp" type="image/webp">
-    <img width="1024" height="751" src="https://yuhang2023.com/wp-content/uploads/2025/12/P11-1024x751.png" alt="" class="wp-image-537" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P11-1024x751.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P11-300x220.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P11-768x563.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P11.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large"><img width="1024" height="751" src="https://yuhang2023.com/wp-content/uploads/2025/12/P11-1024x751.png" alt="" class="wp-image-537" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P11-1024x751.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P11-300x220.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P11-768x563.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P11.png 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 </div>
 
 
@@ -1007,10 +905,7 @@ margin-bottom:16px;
 
 
 
-<figure class="wp-block-image size-large"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P13-1024x741.webp" type="image/webp">
-    <img width="1024" height="741" src="https://yuhang2023.com/wp-content/uploads/2025/12/P13-1024x741.png" alt="" class="wp-image-538" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P13-1024x741.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P13-300x217.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P13-768x556.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P13.png 1216w" sizes="(max-width: 1024px) 100vw, 1024px" />
-</picture></figure>
+<figure class="wp-block-image size-large"><img width="1024" height="741" src="https://yuhang2023.com/wp-content/uploads/2025/12/P13-1024x741.png" alt="" class="wp-image-538" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/P13-1024x741.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/P13-300x217.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/P13-768x556.png 768w, https://yuhang2023.com/wp-content/uploads/2025/12/P13.png 1216w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 </div>
 </div>
 </div>
@@ -1036,10 +931,7 @@ margin-bottom:16px;
 <div class="wp-block-column has-border-color has-custom-color-2-border-color has-custom-color-4-background-color has-background is-layout-flow wp-block-column-is-layout-flow" style="border-style:dashed;border-width:1px;border-radius:10px">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-104fb5a0 wp-block-group-is-layout-constrained" style="border-radius:5px;padding-top:24px;padding-right:16px;padding-bottom:24px;padding-left:16px">
 <div class="wp-block-group is-layout-flex wp-container-core-group-is-layout-d0921e6e wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/光纤激光切割.webp" type="image/webp">
-    <img width="612" height="383" src="https://yuhang2023.com/wp-content/uploads/2025/12/光纤激光切割.png" alt="" class="wp-image-541" style="border-style:none;border-width:0px;border-radius:50%;aspect-ratio:1;object-fit:cover;width:64px" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/光纤激光切割.png 612w, https://yuhang2023.com/wp-content/uploads/2025/12/光纤激光切割-300x188.png 300w" sizes="(max-width: 612px) 100vw, 612px" />
-</picture></figure>
+<figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><img width="612" height="383" src="https://yuhang2023.com/wp-content/uploads/2025/12/光纤激光切割.png" alt="" class="wp-image-541" style="border-style:none;border-width:0px;border-radius:50%;aspect-ratio:1;object-fit:cover;width:64px" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/光纤激光切割.png 612w, https://yuhang2023.com/wp-content/uploads/2025/12/光纤激光切割-300x188.png 300w" sizes="(max-width: 612px) 100vw, 612px" /></figure>
 
 
 
@@ -1063,10 +955,7 @@ margin-bottom:16px;
 <div class="wp-block-column has-border-color has-custom-color-2-border-color has-custom-color-4-background-color has-background is-layout-flow wp-block-column-is-layout-flow" style="border-style:dashed;border-width:1px;border-radius:10px">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-104fb5a0 wp-block-group-is-layout-constrained" style="border-radius:5px;padding-top:24px;padding-right:16px;padding-bottom:24px;padding-left:16px">
 <div class="wp-block-group is-layout-flex wp-container-core-group-is-layout-d0921e6e wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/管材激光切割.webp" type="image/webp">
-    <img width="611" height="383" src="https://yuhang2023.com/wp-content/uploads/2025/12/管材激光切割.png" alt="" class="wp-image-543" style="border-style:none;border-width:0px;border-radius:50%;aspect-ratio:1;object-fit:cover;width:64px" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/管材激光切割.png 611w, https://yuhang2023.com/wp-content/uploads/2025/12/管材激光切割-300x188.png 300w" sizes="(max-width: 611px) 100vw, 611px" />
-</picture></figure>
+<figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><img width="611" height="383" src="https://yuhang2023.com/wp-content/uploads/2025/12/管材激光切割.png" alt="" class="wp-image-543" style="border-style:none;border-width:0px;border-radius:50%;aspect-ratio:1;object-fit:cover;width:64px" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/管材激光切割.png 611w, https://yuhang2023.com/wp-content/uploads/2025/12/管材激光切割-300x188.png 300w" sizes="(max-width: 611px) 100vw, 611px" /></figure>
 
 
 
@@ -1094,10 +983,7 @@ margin-bottom:16px;
 <div class="wp-block-column has-border-color has-custom-color-2-border-color has-custom-color-4-background-color has-background is-layout-flow wp-block-column-is-layout-flow" style="border-style:dashed;border-width:1px;border-radius:10px">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-104fb5a0 wp-block-group-is-layout-constrained" style="border-radius:5px;padding-top:24px;padding-right:16px;padding-bottom:24px;padding-left:16px">
 <div class="wp-block-group is-layout-flex wp-container-core-group-is-layout-d0921e6e wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/设备02.webp" type="image/webp">
-    <img width="638" height="240" src="https://yuhang2023.com/wp-content/uploads/2025/12/设备02.jpg" alt="" class="wp-image-545" style="border-style:none;border-width:0px;border-radius:50%;aspect-ratio:1;object-fit:cover;width:64px" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/设备02.jpg 638w, https://yuhang2023.com/wp-content/uploads/2025/12/设备02-300x113.jpg 300w" sizes="(max-width: 638px) 100vw, 638px" />
-</picture></figure>
+<figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><img width="638" height="240" src="https://yuhang2023.com/wp-content/uploads/2025/12/设备02.jpg" alt="" class="wp-image-545" style="border-style:none;border-width:0px;border-radius:50%;aspect-ratio:1;object-fit:cover;width:64px" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/设备02.jpg 638w, https://yuhang2023.com/wp-content/uploads/2025/12/设备02-300x113.jpg 300w" sizes="(max-width: 638px) 100vw, 638px" /></figure>
 
 
 
@@ -1121,10 +1007,7 @@ margin-bottom:16px;
 <div class="wp-block-column has-border-color has-custom-color-2-border-color has-custom-color-4-background-color has-background is-layout-flow wp-block-column-is-layout-flow" style="border-style:dashed;border-width:1px;border-radius:10px">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-104fb5a0 wp-block-group-is-layout-constrained" style="border-radius:5px;padding-top:24px;padding-right:16px;padding-bottom:24px;padding-left:16px">
 <div class="wp-block-group is-layout-flex wp-container-core-group-is-layout-d0921e6e wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片22.webp" type="image/webp">
-    <img width="566" height="406" src="https://yuhang2023.com/wp-content/uploads/2025/12/图片22.png" alt="" class="wp-image-546" style="border-style:none;border-width:0px;border-radius:50%;aspect-ratio:1;object-fit:cover;width:64px" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片22.png 566w, https://yuhang2023.com/wp-content/uploads/2025/12/图片22-300x215.png 300w" sizes="(max-width: 566px) 100vw, 566px" />
-</picture></figure>
+<figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><img width="566" height="406" src="https://yuhang2023.com/wp-content/uploads/2025/12/图片22.png" alt="" class="wp-image-546" style="border-style:none;border-width:0px;border-radius:50%;aspect-ratio:1;object-fit:cover;width:64px" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片22.png 566w, https://yuhang2023.com/wp-content/uploads/2025/12/图片22-300x215.png 300w" sizes="(max-width: 566px) 100vw, 566px" /></figure>
 
 
 
@@ -1164,19 +1047,13 @@ margin-bottom:16px;
 <div class="wp-block-columns alignwide are-vertically-aligned-center is-layout-flex wp-container-core-columns-is-layout-c030573d wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-container-core-column-is-layout-64015cd0 wp-block-column-is-layout-flow">
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-98bb686d wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/L01.webp" type="image/webp">
-    <img width="278" height="68" src="https://yuhang2023.com/wp-content/uploads/2025/12/L01.jpg" alt="" class="wp-image-548"/>
-</picture></figure>
+<figure class="wp-block-image size-full"><img width="278" height="68" src="https://yuhang2023.com/wp-content/uploads/2025/12/L01.jpg" alt="" class="wp-image-548"/></figure>
 </div>
 
 
 
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-98bb686d wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/L02.webp" type="image/webp">
-    <img width="257" height="66" src="https://yuhang2023.com/wp-content/uploads/2025/12/L02.jpg" alt="" class="wp-image-549"/>
-</picture></figure>
+<figure class="wp-block-image size-full"><img width="257" height="66" src="https://yuhang2023.com/wp-content/uploads/2025/12/L02.jpg" alt="" class="wp-image-549"/></figure>
 </div>
 </div>
 
@@ -1184,19 +1061,13 @@ margin-bottom:16px;
 
 <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-container-core-column-is-layout-64015cd0 wp-block-column-is-layout-flow">
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-98bb686d wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/L03-1.webp" type="image/webp">
-    <img width="185" height="66" src="https://yuhang2023.com/wp-content/uploads/2025/12/L03-1.jpg" alt="" class="wp-image-551"/>
-</picture></figure>
+<figure class="wp-block-image size-full"><img width="185" height="66" src="https://yuhang2023.com/wp-content/uploads/2025/12/L03-1.jpg" alt="" class="wp-image-551"/></figure>
 </div>
 
 
 
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-98bb686d wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/L04.webp" type="image/webp">
-    <img width="240" height="58" src="https://yuhang2023.com/wp-content/uploads/2025/12/L04.jpg" alt="" class="wp-image-552"/>
-</picture></figure>
+<figure class="wp-block-image size-full"><img width="240" height="58" src="https://yuhang2023.com/wp-content/uploads/2025/12/L04.jpg" alt="" class="wp-image-552"/></figure>
 </div>
 </div>
 
@@ -1204,10 +1075,7 @@ margin-bottom:16px;
 
 <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-container-core-column-is-layout-64015cd0 wp-block-column-is-layout-flow">
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-98bb686d wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/L05.webp" type="image/webp">
-    <img width="206" height="55" src="https://yuhang2023.com/wp-content/uploads/2025/12/L05.jpg" alt="" class="wp-image-553"/>
-</picture></figure>
+<figure class="wp-block-image size-full"><img width="206" height="55" src="https://yuhang2023.com/wp-content/uploads/2025/12/L05.jpg" alt="" class="wp-image-553"/></figure>
 </div>
 
 
@@ -1227,10 +1095,7 @@ margin-bottom:16px;
 <div class="wp-block-group alignwide has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="margin-bottom:60px;padding-bottom:20px">
 <div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-9366075c wp-block-group-is-layout-flex">
 <div class="wp-block-group is-layout-flex wp-block-group-is-layout-flex">
-<div class="wp-block-group is-vertical is-content-justification-center is-layout-flex wp-container-core-group-is-layout-81423f52 wp-block-group-is-layout-flex"><div class="wp-block-site-logo"><a href="https://yuhang2023.com/" class="custom-logo-link" rel="home" aria-current="page"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.webp" type="image/webp">
-    <img width="120" height="120" src="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.png" class="custom-logo" alt="宇航金属制品有限公司" decoding="async" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-300x300.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-150x150.png 150w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-768x768.png 768w" sizes="(max-width: 120px) 100vw, 120px" />
-</picture></a></div>
+<div class="wp-block-group is-vertical is-content-justification-center is-layout-flex wp-container-core-group-is-layout-81423f52 wp-block-group-is-layout-flex"><div class="wp-block-site-logo"><a href="https://yuhang2023.com/" class="custom-logo-link" rel="home" aria-current="page"><img width="120" height="120" src="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.png" class="custom-logo" alt="宇航金属制品有限公司" decoding="async" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2.png 1024w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-300x300.png 300w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-150x150.png 150w, https://yuhang2023.com/wp-content/uploads/2025/12/ChatGPT-Image-2025年12月2日-17_07_14-2-768x768.png 768w" sizes="(max-width: 120px) 100vw, 120px" /></a></div>
 
 
 <h3 class="wp-block-heading" id="con"><strong>广东宇航金属制品有限公司</strong></h3>
@@ -1261,10 +1126,7 @@ margin-bottom:16px;
 
 <div class="wp-block-group is-layout-flex wp-block-group-is-layout-flex">
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-4b827052 wp-block-group-is-layout-flex">
-<figure class="wp-block-image size-full is-resized"><picture>
-    <source srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片3.webp" type="image/webp">
-    <img fetchpriority="high" decoding="async" width="503" height="242" src="https://yuhang2023.com/wp-content/uploads/2025/12/图片3.jpg" alt="" class="wp-image-557" style="width:249px;height:auto" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片3.jpg 503w, https://yuhang2023.com/wp-content/uploads/2025/12/图片3-300x144.jpg 300w" sizes="(max-width: 503px) 100vw, 503px" />
-</picture></figure>
+<figure class="wp-block-image size-full is-resized"><img fetchpriority="high" decoding="async" width="503" height="242" src="https://yuhang2023.com/wp-content/uploads/2025/12/图片3.jpg" alt="" class="wp-image-557" style="width:249px;height:auto" srcset="https://yuhang2023.com/wp-content/uploads/2025/12/图片3.jpg 503w, https://yuhang2023.com/wp-content/uploads/2025/12/图片3-300x144.jpg 300w" sizes="(max-width: 503px) 100vw, 503px" /></figure>
 
 
 
@@ -1284,7 +1146,7 @@ margin-bottom:16px;
 
 <div class="wp-block-group alignfull has-custom-dark-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
 <div class="wp-block-group alignwide is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-30d12337 wp-block-group-is-layout-flex" style="border-top-color:var(--wp--preset--color--custom-light);border-top-width:1px;margin-top:40px;padding-top:16px;padding-bottom:16px">
-<p class="has-text-align-center" style="font-size:clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.1), 15px);">Copyright @ 2026 广东宇航金属制品有限公司, All Rights Reserved</p>
+<p class="has-text-align-center" style="font-size:clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.1), 15px);">Copyright @ 2025 广东宇航金属制品有限公司, All Rights Reserved</p>
 </div>
 </div>
 </div>
@@ -1336,105 +1198,6 @@ margin-bottom:16px;
 	}() );
 	
 //# sourceURL=wp-block-template-skip-link-js-after
-</script>
-<script>
-// 导航栏滚动效果
-(function() {
-    const header = document.getElementById('header');
-    let lastScrollTop = 0;
-    let ticking = false;
-    
-    function updateHeader() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        
-        lastScrollTop = scrollTop;
-        ticking = false;
-    }
-    
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(updateHeader);
-            ticking = true;
-        }
-    });
-    
-    // 初始检查
-    updateHeader();
-})();
-
-// 移动端菜单
-(function() {
-    // 创建移动端菜单HTML
-    const mobileMenuHTML = `
-        <button class="mobile-menu-toggle" aria-label="打开菜单">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="mobile-menu-overlay"></div>
-        <div class="mobile-menu-container">
-            <ul class="mobile-menu-nav">
-                <li><a href="/" class="active">首页</a></li>
-                <li><a href="/about/">公司介绍</a></li>
-                <li><a href="/products/">产品介绍</a></li>
-                <li><a href="/workshop/">生产车间</a></li>
-                <li><a href="/culture/">公司文化</a></li>
-                <li><a href="/contact/">联系我们</a></li>
-            </ul>
-            <div class="mobile-menu-cta">
-                <a class="wp-block-button__link" href="/contact/">立即咨询</a>
-            </div>
-        </div>
-    `;
-    
-    // 在页面加载后插入移动端菜单
-    if (window.innerWidth <= 768) {
-        const header = document.getElementById('header');
-        if (header) {
-            const navContainer = header.querySelector('.wens-prova-nav');
-            if (navContainer) {
-                navContainer.insertAdjacentHTML('beforeend', mobileMenuHTML);
-                
-                // 获取元素
-                const toggle = navContainer.querySelector('.mobile-menu-toggle');
-                const overlay = navContainer.querySelector('.mobile-menu-overlay');
-                const container = navContainer.querySelector('.mobile-menu-container');
-                const menuLinks = container.querySelectorAll('.mobile-menu-nav a');
-                
-                // 切换菜单
-                function toggleMenu() {
-                    toggle.classList.toggle('active');
-                    overlay.classList.toggle('active');
-                    container.classList.toggle('active');
-                    document.body.style.overflow = container.classList.contains('active') ? 'hidden' : '';
-                }
-                
-                // 关闭菜单
-                function closeMenu() {
-                    toggle.classList.remove('active');
-                    overlay.classList.remove('active');
-                    container.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-                
-                // 事件监听
-                toggle.addEventListener('click', toggleMenu);
-                overlay.addEventListener('click', closeMenu);
-                
-                // 点击菜单项后关闭菜单
-                menuLinks.forEach(link => {
-                    link.addEventListener('click', closeMenu);
-                });
-            }
-        }
-    }
-})();
 </script>
 <script defer src="https://yuhang2023.com/wp-content/themes/wens-track/assets/js/mobile-enhancements.js?ver=1.0.2" id="wens-track-mobile-enhancements-js"></script>
 <script defer src="https://yuhang2023.com/wp-content/themes/wens-track/assets/js/advanced-enhancements.js?ver=1.0.3" id="wens-track-advanced-enhancements-js"></script>
