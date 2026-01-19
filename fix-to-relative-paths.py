@@ -10,45 +10,17 @@ def fix_to_relative_paths(html_content):
     """
     将 /yuhang/ 开头的绝对路径改为相对路径
     """
-    # 修复图片路径
+    # 修复所有 /yuhang/wp-content/ 路径（包括srcset中的）
     html_content = re.sub(
-        r'(src|srcset)="/yuhang/wp-content/',
-        r'\1="wp-content/',
+        r'/yuhang/wp-content/',
+        r'wp-content/',
         html_content
     )
     
-    # 修复 CSS 路径
+    # 修复所有 /yuhang/assets/ 路径
     html_content = re.sub(
-        r"href='/yuhang/assets/",
-        r"href='assets/",
-        html_content
-    )
-    
-    # 修复 JS 路径
-    html_content = re.sub(
-        r'src="/yuhang/assets/',
-        r'src="assets/',
-        html_content
-    )
-    
-    # 修复字体路径
-    html_content = re.sub(
-        r"url\('/yuhang/assets/",
-        r"url('assets/",
-        html_content
-    )
-    
-    # 修复 favicon 和 icon 路径
-    html_content = re.sub(
-        r'href="/yuhang/wp-content/',
-        r'href="wp-content/',
-        html_content
-    )
-    
-    # 修复 JSON-LD 中的图片路径
-    html_content = re.sub(
-        r'"/yuhang/wp-content/',
-        r'"wp-content/',
+        r'/yuhang/assets/',
+        r'assets/',
         html_content
     )
     
