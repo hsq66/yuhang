@@ -1,0 +1,71 @@
+.has-text-align-left {text-align: right;}
+.has-text-align-right {text-align:left;}
+.wp-block-navigation .wp-block-navigation-item ul {right:auto !important;}
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], input[type="search"], input[type="url"], input[type="password"], textarea{ text-align:right;}
+.alignright {float:left !important;}
+.alignleft {float:right !important;}
+.pin-donation-better-taste-box .wp-block-image{ float:right;}
+.pin-donation-section7-left h2 {padding-right:0px !important;}
+.pin-donation-section8 .wp-block-column {padding:0px !important;}
+.pin-donation-section11-right .wp-block-column, .pin-donation-section11-right .wp-block-columns {border:none;}
+.pin-donation-footer-menu .wp-block-navigation__container li {padding-right:20px;}
+.pin-donation-footer-menu .wp-block-navigation__container li::before { left:auto; right:0px;}
+.pin-donation-footer-column .wp-block-column:nth-child(1) {padding-right:0px !important; padding-left:8%;}
+.pin-donation-blog-content {padding-left:20px !important; padding-right:30px !important;}
+.pin-donation-blog-right-side-page {padding-left:0px !important; padding-right:25px !important;}
+.pin-donation-contact-form .wp-block-group {padding-right:0px !important; padding-left:100px;}
+.pin-donation-blog-single-right-area {padding-left:0px !important; padding-right:25px !important;}
+.pin-donation-blog-single-left-area .wp-block-group ul, .pin-donation-blog-right-side-area .wp-block-group ul, .pin-donation-blog-widget-area .wp-block-group ul, .pin-donation-archive-right .wp-block-group ul{padding-right:15px !important; padding-left:0px !important;}
+.wpcf7-form p {text-align:right;}
+.pin-donation-service-menu {padding-right:0px !important; padding-left:60px !important;}
+.pin-donation-service-menu ul{ padding-left:0px !important; padding-right:25px !important;}
+.pin-donation-blog-left-side-area {padding-right:0px !important; padding-left:50px !important;}
+.pin-donation-archive-left {padding-right:0px !important; padding-left:60px !important;}
+.pin-donation-section9-box .wp-block-column:nth-child(2) {padding-left:0px !important; padding-right:15px !important;}
+.wp-block-navigation__submenu-container ul.wp-block-navigation__submenu-container {left:-100% !important;}
+.wp-block-navigation .wp-block-navigation-item ul {left:-100% !important;}
+.pin-donation-section7-right .wp-block-image{left: 0; right:auto;}
+.pin-donation-section11-left {margin:0px !important; margin-left:60px !important;}
+.pin-donation-section11-left .wp-block-group {padding-right:0px !important; padding-left:70px !important;}
+.pin-donation-menu-section::before { right:0px; left:auto;}
+.pin-donation-section5-left::after {right:0px; left:auto;}
+.pin-donation-home-contact input[type="text"], .pin-donation-home-contact input[type="email"], .pin-donation-home-contact input[type="tel"], .pin-donation-home-contact textarea{ text-align:right; padding-right:40px;}
+.pin-donation-contact-box {padding-right:0px !important;}
+.pin-donation-footer-menu .wp-block-navigation ul li, .pin-donation-footer-column .wp-block-navigation ul li {padding-right:20px;}
+.pin-donation-footer-menu .wp-block-navigation ul li::before, .pin-donation-footer-column .wp-block-navigation ul li::before {left:auto; right:0px; transform:rotate(180deg); top:0px;}
+.wp-block-navigation .wp-block-navigation__submenu-icon{ margin-left:0px; margin-right:10px;}
+.pin-donation-menu .wp-block-navigation ul ul .wp-block-navigation__submenu-icon{left: 15px; right:auto; transform:rotate(180deg);}
+.pin-donation-404 ul.wp-block-post-template li .wp-block-column {padding:0px 20px !important;}
+.pin-donation-pricing-box h6.wp-block-heading sub{left:auto; right:5px;}
+.pin-donation-business-social {padding-right:50px; padding-left:0px;}
+@media(max-width: 1023px){
+.pin-donation-better-taste-box .wp-block-image{ float:none;}
+.pin-donation-blog-right-side-page {padding-left:0px !important; padding-right:0px !important;}
+.pin-donation-contact-form .wp-block-group{ padding:0px !important;}
+.pin-donation-blog-single-right-area {padding-left:0px !important; padding-right:0px !important;}
+.pin-donation-pagination .wp-block-column, .pin-donation-pagination .post-navigation-link-next {text-align:center !important;}
+.pin-donation-blog-content{padding-right:0px !important; padding-left:0px !important;}
+.pin-donation-archive-left, .pin-donation-blog-left-side-area{ padding:0px !important;}
+.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column.pin-donation-banner-content, .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column.pin-donation-banner-image{ text-align:right;}
+.pin-donation-section11-left{ margin-left:0px !important;}
+.pin-donation-discount-box{ right:auto; left:-60px; padding-right:0px !important;}
+.pin-donation-section7-left {padding-bottom:60px !important;}
+.pin-donation-post-section .wp-block-post-date, .pin-donation-post-section h4.wp-block-post-title, .pin-donation-post-section .wp-block-post-excerpt {padding-right:0px !important;}
+.pin-donation-logo h1 {font-size:24px !important;}
+.pin-donation-business-social {padding-right:0px; padding-left:0px;}
+}
+
+@media(max-width: 599px){
+.pin-donation-header-menu {right:auto; left:0;}	
+.pin-donation-banner h2.has-text-color{ width:80%;}
+.pin-donation-team-section .wp-block-heading, .pin-donation-post-section .wp-block-heading {padding:0px !important; padding-bottom: 35px !important;}
+}
+
+@media (min-width: 781px) and (max-width: 1023px) {
+.pin-donation-contact-section-left h2.has-text-color {font-size:32px !important; padding-bottom: 0 !important;}
+.pin-donation-section4 h2.has-text-color {font-size:32px !important; }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+.pin-donation-banner-content .wp-block-heading {padding:0px 200px !important;}
+}

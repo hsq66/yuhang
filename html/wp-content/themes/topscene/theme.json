@@ -1,0 +1,177 @@
+{
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#faa42d",
+					"name": "Background",
+					"slug": "background-primary"
+				},
+				{
+					"color": "#000000",
+					"name": "Background",
+					"slug": "background-secondary"
+				},
+				{
+					"color": "#010002",
+					"name": "Background",
+					"slug": "background-terciary"
+				},
+				{
+					"color": "#FFFFFF",
+					"name": "Text",
+					"slug": "text-primary"
+				},
+				{
+					"color": "#ffb52e",
+					"name": "Text",
+					"slug": "text-secondary"
+				},
+				{
+					"color": "rgba(255, 255, 255, 0.2)",
+					"name": "Transparent",
+					"slug": "transparent"
+				},
+				{
+					"color": "rgba(255, 255, 255, 0.0)",
+					"name": "Transparent 100",
+					"slug": "transparent-100"
+				},
+				{
+					"color": "#797979",
+					"name": "Text gray",
+					"slug": "text-gray"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "620px",
+			"wideSize": "1200px"
+		},
+		"spacing": {
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Instrument Sans\"",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./resources/fonts/instrument-sans/instrument-sans-400-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Instrument Sans\"",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./resources/fonts/instrument-sans/instrument-sans-500-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Instrument Sans\"",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./resources/fonts/instrument-sans/instrument-sans-600-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Instrument Sans\"",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./resources/fonts/instrument-sans/instrument-sans-700-normal.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Instrument Sans\"",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./resources/fonts/instrument-sans/instrument-sans-400-italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Instrument Sans\"",
+							"fontStyle": "italic",
+							"fontWeight": "500",
+							"src": [
+								"file:./resources/fonts/instrument-sans/instrument-sans-500-italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Instrument Sans\"",
+							"fontStyle": "italic",
+							"fontWeight": "600",
+							"src": [
+								"file:./resources/fonts/instrument-sans/instrument-sans-600-italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "\"Instrument Sans\"",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./resources/fonts/instrument-sans/instrument-sans-700-italic.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Instrument Sans\", sans-serif",
+					"name": "Instrument Sans",
+					"slug": "instrument-sans"
+				}
+			]
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--background-secondary)"
+		},
+		"css": ".wp-block-navigation__submenu-container {\n    background-color: white!important;\n    color: black!important;\n    padding: 20px 10px 20px 10px!important;\n    border: 1px solid rgba(255, 255, 255, 0.2)!important;\n    border-radius: 10px!important;\n    font-family: 'instrument-sans' 'sans-serif'\n!important;\n    font-size: 16px!important;\n}\n.wp-block-navigation__submenu-container a { \ncolor:black!important;\n\n}\n.wp-block-navigation-submenu li {\n    transition: transform 0.3s ease;\n}\n\n.column-swiper-left{\n\n\n}\n\n\n\n\n.row-all-works{\nwidth:173px;\n}\n\n\n\n\n\n.stack-border-blue {\n    position: relative;\n    padding: 20px;\n    margin: 20px 0;\n}\n\n.stack-border-blue::before,\n.stack-border-blue::after {\n    content: \"\";\n    position: absolute;\n    width: 20px;\n    height: 20px;\n    border: 2px solid #0038ff; /* Cor azul como na imagem */\n}\n\n/* Canto superior esquerdo */\n.stack-border-blue::before {\n    top: 0;\n    left: 0;\n    border-right: none;\n    border-bottom: none;\n}\n\n/* Canto inferior direito */\n.stack-border-blue::after {\n    bottom: 0;\n    right: 0;\n    border-left: none;\n    border-top: none;\n}\n\n\n\n\n\n\n.primary-button-blue:hover {\nbackground-color: #2C57FA!important; \n\n    \n}\n.image-column-right-portfolio {\nposition:relative;\nwidth:100vw;\nheight:100vh;\n z-index: 1;\n}\n.image-column-right-portfolio img {\nposition:absolute;\nwidth:55%;\nheight:100vh!important;\nobject-fit:cover;\n z-index: -1;\n\n}\n\nwp-block-navigation__submenu-container{\nborder-radius: 50px;\n\n}\n\n.row-navbar{\nwidth:1135px;\ngap:0px;\n}\n.main{\n    position: relative;\n    z-index: 2;\n    overflow: hidden;\n}\n\n.overlay {\n    background-image: linear-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.2));\n    position: absolute;\n    z-index: 1;\n   \n}\n.hero-section{\n    position: relative;\n    width: 100%;\n    height: 100vh;\n    overflow: hidden;\nbottom:50px!important;\n\n}\n.background-hero{\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    object-fit: cover; \n    z-index: -1;\n    \n\n}\n\n\n\n\n\n.grid-four-backgroundblue{\ngrid-row-gap: 16px;\n    grid-column-gap: 16px;\n    grid-template-rows: auto auto;\n    grid-template-columns: 1fr 1fr;\n    grid-auto-columns: 1fr;\n    display: grid;\nwidth:25%;\n}\n.grid-four-backgroundblue2{\ngrid-row-gap: 16px;\n    grid-column-gap: 16px;\n    grid-template-rows: auto auto;\n    grid-template-columns: 1fr 1fr;\n    grid-auto-columns: 1fr;\n    display: grid;\n\n}\n\n.about-image-row{\nposition:relative;\n}\n.about-image {\n    opacity: .4;\n    width: 320px;\n    position:absolute;\ninset: auto auto 19% -16%;\n}\n  .team-about-us-wrapper {\n    grid-row-gap: 50px;\n    grid-template-rows: auto;\n    grid-template-columns: 1fr 1fr 1fr 1fr!important;\n\n  }\n\n  .team-grid{\n    grid-row-gap: 50px;\n    grid-template-rows: auto;\n    grid-template-columns: 1fr 1fr 1fr 1fr!important;\nwidth:52%;\n\n  }\n\n\n\n\n.openpositions-grid{\ngrid-column-gap: 100px;\n    grid-row-gap: 90px;\n    flex-flow: column;\n    grid-template-rows: auto;\n    grid-template-columns: 1fr 1fr;\n    grid-auto-columns: 1fr;\n    justify-content: flex-start;\n    align-items: stretch;\n    display: grid;\n\n}\n\n.testimonials-grid{\n\ngrid-column-gap: 30px;\n    grid-row-gap: 90px;\n    flex-flow: column;\n    grid-template-rows: auto;\n    grid-template-columns: 1fr 1fr 1fr!important;\n    grid-auto-columns: 1fr;\n    justify-content: flex-start;\n    align-items: stretch;\n    display: grid;\n\n}\n\n\n\n.submit-btn{\nwidth:30%;\nborder-radius: 30px;\npadding: 15px 8px 15px 8px;\nbackground-color: white;\nborder: none;\ncolor: #000000;\ncursor: pointer;\nfont-size: 20px;\nfont-family: 'instrument-sans' 'sans-serif';\nfont-weight:500;\nmargin-top:40px;\n}\n\n\n\n\n.stack-hero-about{\nheight:60vh;\nwidth:100%;\n}\n\n\n.image-column-content{\nwidth:46vw;\noverflow:hidden;\n\n}\n\n.image-stack-column-about{\nwidth:100%;\nheight:63vh;\n\n}\n\n.ourvalues-stack-image{\nwidth:100vw;\nheight:27vh;\n}\n.ourvalues-grid{\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n    grid-template-rows: auto;\n    grid-template-columns: 1.3fr 1.5fr 1.3fr;\n}\n.stack-column-about-right{\nheight:57vh\n}\n.column-right-about{\nposition:relative;\n}\n\n\n\n.ourvalues-grid-services{\ngrid-column-gap: 35px;\n    grid-row-gap: 40px;\n    grid-template-rows: auto;\n    grid-template-columns: 1.2fr 1.3fr 1.1fr!important;\n    margin-top: 50px;\n\n}\n\n\n.row-title-prices{\nwidth:1000px;\n}\n\n\n\n.list-single-posts{\ngap:30px!important;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        .contact-form {\n\n                       border-radius: 12px;\n         \n            width: 100%;\n            max-width: 600px;\n        }\n\n        .form-row {\n           display: flex;\n           gap:30px;\n            margin-bottom: 20px;\n        }\n\n        .form-row > .form-group {\n            flex: 1;\n        }\n\n        .form-group {\n            width: 100%;\n\n        }\n\n        .form-group label {\n            display: block;\n            margin-bottom: 8px;\n            color: white;\n            font-weight: 500;\n\n        }\n\n        .form-group input,\n        .form-group textarea {\n            width: 100%;\n            padding: 12px;\n            border: 1px solid rgba(255,255,255,0.3);\nbackground-color: #fff !important;\n            border-radius: 8px;\n            font-family: 'Instrument Sans', sans-serif;\n            font-size: 16px;\n            transition: border-color 0.3s ease;\n            box-sizing: border-box;\n        }\n\n        .form-group input:focus,\n        .form-group textarea:focus {\n            outline: none;\n            border-color: #4A90E2;\n        }\n\n        .form-group textarea {\n            resize: vertical;\n            min-height: 120px;\n        }\n\n     .get-in-touch{\n    padding: 20px 20px;\n    margin-top: 40px;\n    background-color: transparent;\n    color: #ffffff;\n    border: none;\n    border-bottom: 1px solid #ffffff;\n    font-family: 'Instrument Sans', sans-serif;\n    font-size: 30px;\n    font-weight: 500;\n    cursor: pointer;\n    transition: color 0.3s ease;\n    display: block;\n    width: 40%;\n    max-width: 250px;\n    margin-left: auto;\n    margin-right: auto;\n    box-sizing: border-box;\n}\n@media screen and (min-width:390px) and (max-width:1366px) {\n.get-in-touch{\nwidth:100%;\n}\n}\n\n        .get-in-touch:hover {\n            color: #FA962C!important;\ncolor:white;\n        }\n\n        @media (max-width: 600px) {\n            .form-row {\n                flex-direction: column;\n                gap: 20px;\n            }\n        }\n\n\n\n\n\n.links-footer-wrap {\n    width: 100%;\n\n\n    grid-column-gap: 20px!important;\n    justify-content: flex-start;\ngrid-template-columns: 1fr 1.5fr 3fr!important;\n    align-items: flex-start;\n    display: flex;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* FAQ Styling for WordPress Details Element */\ndetails {\n    width: 100%;\n \n    border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n    margin-bottom: 30px; /* Aumentei o espaço entre as perguntas */\npadding: 2vh 0;\n}\n\ndetails:first-child {\n    border-top: 1px solid rgba(255, 255, 255, 0.1);\npadding-top: 4vh;\n}\n\n\n\ndetails > summary {\n    list-style: none;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 15px 0;\n    cursor: pointer;\n    color: #ffffff;\n    font-size: 35px;\n    font-weight: 500;\n    transition: all 0.3s ease;\n}\n\n/* Remove default browser arrow */\ndetails > summary::-webkit-details-marker,\ndetails > summary::marker {\n    display: none;\n}\n\n/* Custom arrow styling */\ndetails > summary::after {\n    content: '↗';\n    background-color: transparent;\n    color: #ffffff;\n    padding: 8px 17px;\n    border-radius: 40px; /* Ajustei o border-radius */\n    border: 1px solid white; /* Adicionei borda branca */\n    transition: all 0.3s ease;\n}\n\n/* Styling when details are open */\ndetails[open] > summary {\n    color: #FA962C;\n}\n\ndetails[open] > summary::after {\n    background-color: #1E90FF;\n    color: #ffffff;\n    border-radius: 40px; /* Mantive o mesmo border-radius */\n    transform: rotate(80deg);\n    border: 1px solid white; /* Mantive a borda branca */\n}\n\ndetails > summary:hover {\n    color: #FFC87C;\n}\n\ndetails > div {\n    padding: 15px 0;\n    color: #ffffff;\n    opacity: 0.8;\n    line-height: 1.6;\n    font-size: 14px;\n}\n\n/* Optional: Background settings for dark theme */\ndetails {\n    background-color: #000000;\n}\n\n.stack-at-our-agency{\nposition: relative;\ntext-align: center;\n\n}\n.info-text-absolute {\nborder-radius:55px;\n    letter-spacing: -1px;\n    padding: 20px 30px;\n    font-size: 26px;\n    line-height: 1em;\n    position: absolute;\n    inset: 20px -200px auto auto;\n}\n .excellence-p {\nborder-radius:55px;\n    letter-spacing: -1px;\n    padding: 20px 30px;\n    font-size: 26px;\n    line-height: 1em;\n    position: absolute;\nright: 705px;\nbottom: 330px;\n}\n\n\n.innovative-p{\nborder-radius:55px;\n    letter-spacing: -1px;\n    padding: 20px 30px;\n    font-size: 26px;\n    line-height: 1em;\n    position: absolute;\nright: 385px;\nbottom: 60px;\n\n}\n.creativity-p{\nborder-radius:55px;\n    letter-spacing: -1px;\n    padding: 20px 30px;\n    font-size: 26px;\n    line-height: 1em;\n    position: absolute;\nleft: 350px;\nbottom: 180px;\n\n}\n.growth-p{\nborder-radius:55px;\n    letter-spacing: -1px;\n    padding: 20px 30px;\n    font-size: 26px;\n    line-height: 1em;\n    position: absolute;\nleft: 400px;\nbottom: 90px;\n}\n.row-recent-services{\nwidth:1100px;\n\n}\n.img-topscene img {\nmax-width: 500px; }\n.g0 {\ngap: 16px !important;\n}\n/* Mobile */\n@media (max-width: 768px) {\n    .text_mobile {\n        font-size: 32px !important;\n    }\n\n    .img-hero {\n        margin: 0 !important;\n    }\n}\n\n/* Tablet */\n@media (min-width: 769px) and (max-width: 1024px) {\n    .text_mobile {\n        font-size: 32px !important;\n    }\n\n    .img-hero {\n        margin: 0 !important;\n    }\n}",
+		"elements": {
+			"caption": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--instrument-sans)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--instrument-sans)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--instrument-sans)"
+		}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header"
+		},
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	],
+	"version": 3,
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json"
+}

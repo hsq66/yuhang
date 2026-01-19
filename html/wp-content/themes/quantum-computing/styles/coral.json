@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Coral",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [        
+        {
+          "slug": "bodybackground",
+          "color": "#0F0A13",
+          "name": "Bodybackground"
+        },     
+        {
+          "slug": "primary",
+          "color": "#5C1A99",
+          "name": "Primary"
+        },
+        {
+          "slug": "seconadry",
+          "color": "#7B599B",
+          "name": "Seconadry"
+        },
+        {
+          "slug": "tertiary",
+          "color": "#000B24",
+          "name": "Tertiary"
+        },
+        {
+          "slug": "secaccent",
+          "color": "#33155A",
+          "name": "Secaccent"
+        },
+        {
+          "slug": "thirdaccent",
+          "color": "#9168B8",
+          "name": "Thirdaccent"
+        },
+        {
+          "slug": "heading",
+          "color": "#FFFFFF",
+          "name": "Heading"
+        },
+        {
+          "slug": "border-color",
+          "color": "#CACACA",
+          "name": "Border Color"
+        },
+        {
+          "slug": "secbackground",
+          "color": "#F2EEEE",
+          "name": "Secbackground"
+        },
+        {
+          "slug": "background",
+          "color": "#FFFFFF",
+          "name": "Background"
+        },
+        {
+          "slug": "tertiary-bg-color",
+          "color": "#6d6969",
+          "name": "Tertiary Bg Color"
+        },
+        {
+          "slug": "foreground",
+          "color": "#000000",
+          "name": "Foreground"
+        }
+      ],
+      "gradients": [
+        {
+        "slug": "primary-gradient",
+        "gradient": "linear-gradient(180deg, rgb(99 17 158 / 0%) 5.76%, #120514 92.18%)",
+        "name": "Primary Gradient"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+# 广东宇航金属制品有限公司 - Robots.txt
+# 钣金加工行业SEO优化配置
+
+User-agent: *
+Allow: /
+Allow: /wp-content/uploads/
+
+# 禁止爬取管理后台
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+
+# 禁止爬取动态页面
+Disallow: /*?
+Disallow: /*?s=
+Disallow: /search/
+Disallow: /*?attachment_id=
+
+# 禁止爬取登录和注册页面
+Disallow: /wp-login.php
+Disallow: /wp-register.php
+Disallow: /wp-signup.php
+
+# 禁止爬取Feed（可选）
+Disallow: /feed/
+Disallow: /*/feed/
+Disallow: /comments/feed/
+
+# 禁止爬取trackback
+Disallow: /trackback/
+Disallow: /*/trackback/
+
+# 允许爬取特定文件
+Allow: /wp-content/uploads/
+Allow: /wp-includes/js/
+Allow: /wp-includes/css/
+
+# Sitemap位置
+Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://yourdomain.com/sitemap_index.xml
+
+# 爬取延迟（可选，针对特定爬虫）
+# Crawl-delay: 10
+
+# 针对百度爬虫的特殊配置
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+# 针对Google爬虫的特殊配置
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+# 针对搜狗爬虫
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 5
+
+# 针对360爬虫
+User-agent: 360Spider
+Allow: /
+Crawl-delay: 5
+
+# 禁止恶意爬虫
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

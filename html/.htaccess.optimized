@@ -1,0 +1,317 @@
+# .htaccess 优化配置
+# 广东宇航金属制品有限公司
+# 性能和安全优化
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+# ========================================
+# 图片优化
+# ========================================
+
+# WebP自动替换（如果浏览器支持）
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # 检查是否支持WebP
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  
+  # 检查WebP文件是否存在
+  RewriteCond %{REQUEST_FILENAME} (.*)\.(jpe?g|png)$
+  RewriteCond %1.webp -f
+  
+  # 重写为WebP
+  RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1,L]
+</IfModule>
+
+# WebP MIME类型
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+
+# 图片缓存头
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+    Header append Vary Accept
+  </FilesMatch>
+</IfModule>
+
+# ========================================
+# 性能优化
+# ========================================
+
+# 启用Gzip压缩
+<IfModule mod_deflate.c>
+  # 压缩HTML、CSS、JavaScript、Text、XML和字体
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # 移除浏览器bug
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>
+
+# 浏览器缓存
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # 图片缓存1年
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # CSS和JavaScript缓存1个月
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # 字体缓存1年
+  ExpiresByType application/x-font-ttf "access plus 1 year"
+  ExpiresByType application/x-font-woff "access plus 1 year"
+  ExpiresByType application/x-font-woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  
+  # HTML缓存1小时
+  ExpiresByType text/html "access plus 1 hour"
+  
+  # 其他文件缓存1周
+  ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# 缓存控制头
+<IfModule mod_headers.c>
+  # 图片
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+  
+  # CSS和JavaScript
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+  
+  # 字体
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+  
+  # HTML
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "max-age=3600, public"
+  </FilesMatch>
+</IfModule>
+
+# ========================================
+# 安全优化
+# ========================================
+
+# 禁止目录浏览
+Options -Indexes
+
+# 保护wp-config.php
+<Files wp-config.php>
+  order allow,deny
+  deny from all
+</Files>
+
+# 保护.htaccess
+<Files .htaccess>
+  order allow,deny
+  deny from all
+</Files>
+
+# 保护readme.html
+<Files readme.html>
+  order allow,deny
+  deny from all
+</Files>
+
+# 保护license.txt
+<Files license.txt>
+  order allow,deny
+  deny from all
+</Files>
+
+# 禁止访问PHP错误日志
+<Files error_log>
+  order allow,deny
+  deny from all
+</Files>
+
+# 禁止访问.git目录
+<IfModule mod_rewrite.c>
+  RewriteRule ^\.git - [F,L]
+</IfModule>
+
+# 防止脚本注入
+<IfModule mod_rewrite.c>
+  RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+  RewriteCond %{QUERY_STRING} GLOBALS(=|[|%[0-9A-Z]{0,2}) [OR]
+  RewriteCond %{QUERY_STRING} _REQUEST(=|[|%[0-9A-Z]{0,2})
+  RewriteRule ^(.*)$ index.php [F,L]
+</IfModule>
+
+# 安全头部
+<IfModule mod_headers.c>
+  # XSS保护
+  Header set X-XSS-Protection "1; mode=block"
+  
+  # 防止点击劫持
+  Header always append X-Frame-Options SAMEORIGIN
+  
+  # 禁止MIME类型嗅探
+  Header set X-Content-Type-Options nosniff
+  
+  # 引用策略
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # 内容安全策略（根据需要调整）
+  # Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
+</IfModule>
+
+# ========================================
+# SEO优化
+# ========================================
+
+# 强制使用HTTPS（如果已配置SSL）
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# 强制使用www（或non-www）
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTP_HOST} !^www\. [NC]
+#   RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# 移除尾部斜杠（可选）
+# <IfModule mod_rewrite.c>
+#   RewriteCond %{REQUEST_FILENAME} !-d
+#   RewriteCond %{REQUEST_URI} (.+)/$
+#   RewriteRule ^ %1 [R=301,L]
+# </IfModule>
+
+# ========================================
+# 字符编码
+# ========================================
+
+# UTF-8编码
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .css .js .xml .json .rss .atom
+</IfModule>
+
+# ========================================
+# MIME类型
+# ========================================
+
+<IfModule mod_mime.c>
+  # 字体
+  AddType application/vnd.ms-fontobject .eot
+  AddType application/x-font-ttf .ttf
+  AddType application/x-font-opentype .otf
+  AddType application/x-font-woff .woff
+  AddType application/font-woff2 .woff2
+  AddType image/svg+xml .svg
+  
+  # 其他
+  AddType application/javascript .js
+  AddType application/json .json
+  AddType image/webp .webp
+</IfModule>
+
+# ========================================
+# 限制文件上传大小（可选）
+# ========================================
+
+# php_value upload_max_filesize 64M
+# php_value post_max_size 64M
+# php_value max_execution_time 300
+# php_value max_input_time 300
+
+# ========================================
+# 禁用XML-RPC（如果不需要）
+# ========================================
+
+<Files xmlrpc.php>
+  order deny,allow
+  deny from all
+</Files>
+
+# ========================================
+# 限制访问wp-admin（可选，需要修改IP）
+# ========================================
+
+# <Files wp-login.php>
+#   order deny,allow
+#   deny from all
+#   allow from xxx.xxx.xxx.xxx
+# </Files>
+
+# ========================================
+# 移动端优化
+# ========================================
+
+# 启用Keep-Alive
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+</IfModule>
+
+# ========================================
+# 错误页面（可选）
+# ========================================
+
+# ErrorDocument 404 /404.html
+# ErrorDocument 403 /403.html
+# ErrorDocument 500 /500.html
+
+# ========================================
+# 注意事项
+# ========================================
+
+# 1. 备份原始.htaccess文件
+# 2. 逐步启用各项优化
+# 3. 测试网站功能是否正常
+# 4. 根据实际情况调整配置
+# 5. 某些配置需要服务器支持相应模块

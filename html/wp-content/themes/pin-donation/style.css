@@ -1,0 +1,773 @@
+/*
+Theme Name: Pin Donation
+Theme URI: https://www.pinnaclethemes.net/product/pin-donation/
+Author: sinsikha
+Author URI: https://www.pinnaclethemes.net
+Description: Pin Donation is a clean and modern WordPress theme. It is made for charitable groups and not-for-profit projects. It works well for any charitable organization, philanthropic mission, or community-based drive that wants to share updates and collect support online. The layout is simple, fast, and easy to customize. You can display campaigns, events, welfare programs, and team details in neat sections. It also suits humanitarian agencies and voluntary associations that need a trusted space to highlight their work. Fully responsive and SEO friendly, Pin Donation helps any community support organization or charity-run project create a strong and friendly online presence. It works with GiveWP Charity Donation Plugin for accepting online donations. Documentation : https://pinnaclethemes.net/themedocumentation/pin-donation-doc/
+Version: 1.2
+Tested up to: 6.8
+Requires PHP: 5.6
+License: GNU General Public License v3.0
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
+	
+Text Domain: pin-donation
+Tags: blog, portfolio, one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, full-site-editing, block-patterns, featured-images, full-width-template, sticky-post, threaded-comments, block-styles, rtl-language-support, style-variations, wide-blocks, custom-logo, custom-colors, editor-style
+
+Pin Donation is based on Underscores theme(Underscores is distributed under the terms of the GNU GPL v3.0).
+
+Pin Donation WordPress Theme has been created by Pinnacle Themes(pinnaclethemes.net), 2025.
+Pin Donation WordPress Theme is released under the terms of GNU GPL v3.0
+*/
+
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section{display: block;}
+audio,
+canvas,
+video{display: inline-block;}
+audio:not([controls]){display: none; height: 0;}
+[hidden]{display: none;}
+html{font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+html,
+button,
+input,
+select,
+textarea{font-family: 'Poppins', sans-serif;}
+
+body{margin: 0; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;}
+
+a{text-decoration:underline;}
+a:hover{color: #cccccc; text-decoration:underline;}
+
+#logo-main a:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus,
+a:focus {
+  outline: 2px dotted #666666;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{clear: both; font-family: 'Playfair Display';}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a{color: inherit;}
+
+p{margin: 0 0 15px;}
+
+img{border: none; max-width: 100%; -ms-interpolation-mode: bicubic; border: 0; vertical-align: middle;}
+
+address{font-style: italic; margin: 0 0 24px;}
+abbr[title]{border-bottom: 1px dotted;}
+dfn{font-style: italic;}
+mark{background: #ff0; color: #000;}
+code,
+kbd,
+pre,
+samp{font-family: monospace, serif; font-size: 14px; hyphens: none;}
+pre{background: #f5f5f5; color: #666; font-family: monospace; font-size: 14px; margin: 20px 0; overflow: auto; padding: 20px; white-space: pre; white-space: pre-wrap; word-wrap: break-word;}
+blockquote, q{hyphens: none; quotes: none;}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after{content: ""; content: none;}
+blockquote{font-size: 18px; font-style: italic; font-weight: 300; margin: 24px 40px;}
+blockquote blockquote{margin-right: 0;}
+blockquote cite,
+blockquote small{font-size: 14px; font-weight: normal; text-transform: uppercase;}
+blockquote em,
+blockquote i{font-style: normal; font-weight: 300;}
+blockquote strong,
+blockquote b{font-weight: 400;}
+small{font-size: smaller;}
+sub,
+sup{font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup{top: -0.5em;}
+sub{bottom: -0.25em;}
+dl{margin: 0 20px;}
+dt{font-weight: bold;}
+dd{margin: 0 0 20px;}
+menu,
+ol,
+ul{margin: 16px 0; padding: 0 0 0 15px;}
+ul{list-style-type: square;}
+nav ul,
+nav ol{list-style: none; list-style-image: none;}
+li > ul,
+li > ol{margin: 0;}
+svg:not(:root){overflow: hidden;}
+figure{margin: 0;}
+form{margin: 0;}
+fieldset{border: 1px solid #c0c0c0; margin: 0 2px; min-width: inherit; padding: 0.35em 0.625em 0.75em;}
+legend{border: 0; padding: 0; white-space: normal;}
+
+button,
+input,
+select,
+textarea{font-size: 100%; margin: 0; max-width: 100%; vertical-align: baseline;}
+button,
+input{line-height: normal;}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]{-webkit-appearance: button; cursor: pointer;}
+button[disabled],
+input[disabled]{cursor: default;}
+input[type="checkbox"],
+input[type="radio"]{padding: 0;}
+input[type="search"]{-webkit-appearance: textfield; padding-right: 2px; width: 270px;}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance: none;}
+button::-moz-focus-inner,
+input::-moz-focus-inner{border: 0; padding: 0;}
+textarea{overflow: auto; vertical-align: top; resize: none; min-height: 120px;}
+
+table{border-bottom: 1px solid #ededed; border-collapse: collapse; border-spacing: 0; line-height: 2; margin: 0 0 20px;	width: 100%;}
+caption,
+th,
+td{font-weight: normal; text-align: left;}
+caption{font-size: 16px; margin: 20px 0;}
+th{font-weight: bold; text-transform: uppercase;}
+td{border-top: 1px solid #ededed; padding: 6px 10px 6px 0;}
+del{color: #333;}
+ins{background: #fff9c0; text-decoration: none;}
+
+.screen-reader-text{clip: rect(1px, 1px, 1px, 1px); overflow: hidden; position: absolute !important; height: 1px; width: 1px;}
+.screen-reader-text:focus{background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-weight: bold; height: auto; line-height: normal; padding: 15px 23px 14px; position: absolute; left: 5px; top: 5px; text-decoration: none; width: auto; z-index: 100000; /* Above WP toolbar */}
+
+/* Form fields styles. */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="password"],
+textarea{border: 1px solid #efefef; width: 100%; border-radius: 8px; padding: 13px; outline: none;}
+
+select{background: transparent; border: 1px solid #00b5e2; width: 100%; border-radius: 8px; padding: 13px; outline: none;}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"]{background-color: #f25f43; border: none; border-radius: 50px; color: #ffffff; display: inline-block; font-size: 20px; font-weight: 500; padding: 18px 50px; text-decoration: none; transition: all 0.2s;}
+
+/* Placeholder text color -- selectors need to be separate to work. */
+::placeholder{color: #041F69; opacity: 1;}
+:-ms-input-placeholder{color: #041F69;}
+::-ms-input-placeholder{color: #041F69;}
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 0;
+	border: none;
+	color: var(--wp--preset--color--background);
+	font-size: var(--wp--preset--font-size--medium);
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+	opacity: 0.90;
+}
+
+.wp-block-post-content p{margin-bottom:15px;}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+/* We also want to avoid stacking negative margins. */
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: inherit;
+}
+
+/*
+ * Responsive menu container padding.
+ * This ensures the responsive container inherits the same
+ * spacing defined above. This behavior may be built into
+ * the Block Editor in the future.
+ */
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--custom--spacing--outer);
+	padding-bottom: var(--wp--custom--spacing--large);
+	padding-right: var(--wp--custom--spacing--outer);
+	padding-left: var(--wp--custom--spacing--outer);
+}
+
+.pin-donation-topbar .wp-block-image img{vertical-align:middle;}
+.pin-donation-mail-top a{text-decoration:none;}
+.pin-donation-top-button a:hover{color:#000; text-decoration:none;}
+.pin-donation-discover-button a:hover{background-color:#f25f43 !important; color:#FFF !important; text-decoration:none;}
+.pin-donation-button-postall a:hover{color:#fff !important; background-color:#282828 !important; text-decoration:none;}
+
+.pin-donation-footer-news .wp-block-latest-posts.wp-block-latest-posts__list li{margin-bottom:50px;}
+.pin-donation-footer-news .wp-block-latest-posts.wp-block-latest-posts__list li img{border-radius:8px;}
+.pin-donation-footer-news li time{color:#f25f43; padding:0;}
+.pin-donation-footer-news .wp-block-latest-posts.wp-block-latest-posts__list li a{text-decoration:none; color:#d9d9d9; font-size:14px;}
+
+.pin-donation-post-list li{margin-bottom:35px; padding-bottom:35px; display:inline-block; border-bottom:1px solid #e6e6e6;}
+.pin-donation-post-list li:last-child{border-bottom:none;}
+.pin-donation-post-list li a.wp-block-latest-posts__post-title{text-decoration:none; color:#253242; font-weight:500; font-size:18px;}
+.pin-donation-post-list li a:hover.wp-block-latest-posts__post-title{color:#f25f43;}
+
+.pin-donation-post-list li a.wp-block-latest-posts__read-more{background-color:#f15f43; display:table; padding:10px 25px; margin-top:15px; border-radius: 250px; color:#FFF; text-decoration:none; text-transform:uppercase;}
+.pin-donation-post-list li .wp-block-latest-posts__featured-image{margin-right:4em;}
+.pin-donation-post-list li a:hover.wp-block-latest-posts__read-more{background-color:#282828;}
+
+.pin-donation-footer{padding:0px !important;}
+.pin-donation-copyright{max-width:100% !important;}
+
+.pin-donation-header .wp-block-cover, .pin-donation-header .wp-block-cover-image, .pin-donation-footer .wp-block-cover, .pin-donation-footer .wp-block-cover-image, .pin-donation-porduct-section, .pin-donation-menu-section{align-items:inherit;}
+.pin-donation-footer-menu .wp-block-navigation ul li, .pin-donation-footer-column .wp-block-navigation ul li {padding-left:20px; position:relative;}
+.pin-donation-footer-menu .wp-block-navigation ul li:before, .pin-donation-footer-column .wp-block-navigation ul li:before{left:0px; top:50%; position:absolute; border-radius:100%; transform:translateY(-50%); content:"\f345"; font-family: 'Dashicons'; font-size:18px; font-weight:600; color:#d9d9d9;}
+
+.pin-donation-footer-menu .wp-block-navigation ul li:hover:before, .pin-donation-footer-column .wp-block-navigation ul li:hover:before{color:#f25f43 !important;}
+
+.pin-donation-header .wp-block-navigation__submenu-container{min-width:215px !important; background:#5f1c00 !important;}
+.pin-donation-menu .wp-block-navigation__container{ z-index:9999;}
+.pin-donation-menu .wp-block-navigation__container li {padding:12px 0px 35px;}
+.pin-donation-menu .wp-block-navigation__submenu-container li{padding:inherit;}
+.pin-donation-menu ol.has-background, .pin-donation-menu ul.has-background {padding:0px !important;}
+.pin-donation-menu .wp-block-group {padding:0;}
+.wc-block-mini-cart__button:hover {background:transparent;}
+.wp-block-navigation ul li a:hover{text-decoration:none;}
+
+.pin-donation-menu {font-family:'Poppins', sans-serif;}
+.pin-donation-menu .wp-block-navigation ul li a:hover, .pin-donation-menu .wp-block-navigation ul li.current-menu-item a{color:#f25f43;}
+.pin-donation-menu .wp-block-navigation ul li a:hover{color:#f25f43 !important;}
+.pin-donation-lists .wp-block-image img{vertical-align:text-top !important;}
+
+.pin-donation-years-foundation{position:relative;}
+.pin-donation-foundation-circle{position:absolute; right:0; bottom:0; width:230px; height:230px;}
+.pin-donation-plus{position: relative; top: 30px; right: 65px; text-align: right;}
+.pin-donation-numtext{letter-spacing:-1px;}
+.pin-donation-numtext{letter-spacing: -1px; position: relative; top: -15px;}
+.pin-donation-yeartext{position: relative; top: -15px;}
+.pin-donation-yeartext{position: relative; top: -30px; line-height: 26px;}
+
+.pin-donation-footer a{color:#d9d9d9 !important;}
+.pin-donation-footer a:hover{color:#f25f43 !important;}
+
+.pin-donation-menu .wp-block-navigation ul ul li.current-menu-item a{color:#f25f43;}
+.pin-donation-footer-menu .wp-block-navigation ul li a:hover, .pin-donation-footer-menu .wp-block-navigation ul li.current-menu-item a, .pin-donation-footer-column .wp-block-navigation ul li a:hover, .pin-donation-footer-column .wp-block-navigation ul li.current-menu-item a{ color:#ffffff;}
+.pin-donation-footer-menu .wp-block-navigation-submenu ul, .pin-donation-footer-menu .wp-block-navigation__submenu-icon, .pin-donation-footer-column .wp-block-navigation-submenu ul, .pin-donation-footer-column .wp-block-navigation__submenu-icon {display:none !important;}
+.pin-donation-menu .wp-block-navigation ul {border:none !important;}
+.pin-donation-menu .wp-block-navigation ul ul .wp-block-navigation__submenu-icon{position:absolute; right:-15px; background:none;}
+.pin-donation-menu ul {width:260px !important;}
+.pin-donation-menu ul li ul li a {padding:7px 15px !important; padding-right:50px !important;}
+.pin-donation-coffee-beans .wp-block-image{background:#5f1c00; width:170px; height:170px; border-radius:100%; align-items:center !important; display:flex !important; justify-content:center !important;}
+.pin-donation-coffee-beans h3 {width:50%; margin:0 auto;}
+.pin-donation-coffee-beans:hover .wp-block-image{background: #c28030;}
+.pin-donation-coffee-beans:hover h3{color:#c28030 !important;}
+.pin-donation-better-taste-box .wp-block-image{background:#fff; width:100px; height:100px; border-radius:100%; align-items:center !important; display:flex !important; justify-content:center !important; float:left;}
+.pin-donationduct-box .wc-block-components-product-image img {width:auto !important; margin:0 auto; display:table;}
+
+.pin-donation-menu-section::before {content:''; width:35%; height:100%; background:#c28030; position:absolute; left:0px; top:0; z-index:1;}
+.pin-donation-section .wp-block-columns{position: relative;
+overflow: hidden;}
+.pin-donation-discount-box {width:230px !important; height:230px; position:absolute; right:-60px; bottom:-50px;}
+.pin-donation-section-box .wp-block-column {z-index:9;}
+.pin-donation-section .pin-donation-section-box::before {content:''; width:99.5%; height:99%; border:solid 2px #bd9655; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); border-style: dashed;}
+.pin-donation-inner-banner{ position:relative; z-index:-1;}
+.pin-donation-banner .wp-block-image {width:100%; max-width:100%;}
+.pin-donation-banner {height:660px; overflow:hidden;}
+
+.pin-donation-section11-left {margin-right:100px !important;}
+.pin-donation-section11{ position:relative;}
+.pin-donation-section11::before {content:''; width:41.5%; position:absolute; height:100%; background:#c28030; z-index:0;}
+.pin-donation-section11 .wp-block-columns{ position:relative; z-index:0;}
+
+.pin-donation-section7-right .wp-block-image {position:absolute; right:0;}
+.pin-donation-section7 {position:relative; overflow:hidden;}
+.pin-donation-section5-left {position:relative;}
+.pin-donation-section5-left::after {content:""; position:absolute; left:0; top:0; background:#c28030; width:45%; height:100%; z-index:-1;}
+
+.pin-donation-header{ position:absolute !important; width:100%; z-index:2;}
+
+.pin-donation-banner {position:relative;}
+.pin-donation-banner img{ position:relative; z-index:999; width:100% !important;}
+.pin-donation-banner .wp-block-image {margin:0px;}
+.pin-donation-header-social {padding-top:0px;}
+.pin-donation-header-social .wp-block-social-links li svg {font-size:22px;}
+.pin-donation-header-social .wp-block-social-links li a {padding:8px;}
+.pin-donation-banner-content {position:absolute; left: 0; right: 0; top: 50%; z-index: 999; transform: translateY(-50%);}
+.pin-donation-image-box .wp-block-heading {font-family:'Poppins', sans-serif;}
+
+.pin-donation-business-social .wp-block-social-links li {padding:7px; margin:0px 5px;}
+.pin-donation-business-social .wp-block-social-links li a {font-size:18px;}
+.pin-donation-safe-box .wp-block-heading {font-family:'Poppins', sans-serif;}
+
+.pin-donation-post-section .wp-block-buttons {margin-bottom:-30px;}
+.pin-donation-team-section .wp-block-column .wp-block-heading{font-family: 'Poppins', sans-serif;}
+.pin-donation-team-section1-right .wp-block-social-links li a {padding:10px; font-size:20px;}
+.pin-donation-contact-section-left h4.wp-block-heading {font-family:'Poppins', sans-serif;}
+.pin-donation-home-contact input[type="text"], .pin-donation-home-contact input[type="email"], .pin-donation-home-contact input[type="tel"], .pin-donation-home-contact textarea {margin:10px 0px; background:#f3f6f5; border:none; padding:25px 30px; font-size:17px; border-radius:10px; padding-left:40px;}
+
+.pin-donation-team-section1-left .wp-block-group {padding:0px !important;}
+.pin-donation-team-section1-left .wp-block-group img {width:100%;}
+.pin-donation-team-section .wp-block-column .wp-block-group {padding:0px !important;}
+.pin-donation-team-section .wp-block-column .wp-block-group .wp-block-image {width:100% !important;}
+.pin-donation-team-section .wp-block-column .wp-block-group .wp-block-image img { width:100%;}
+
+.pin-donation-home-contact input[type="text"]::placeholder, .pin-donation-home-contact input[type="email"]::placeholder, .pin-donation-home-contact input[type="tel"]::placeholder, .pin-donation-home-contact textarea::placeholder{color:#515151;}
+.pin-donation-home-contact input[type="submit"]{background-color: #282828; font-size: 17px; border-radius: 0px;}
+.pin-donation-home-contact textarea {height:240px; margin-bottom:30px;}
+.pin-donation-home-contact input[type="submit"]:hover{ background:#f3f6f5; color:#121212;}
+.pin-donation-home-contact {height:75%; position:relative; bottom:-25%; width:85%; margin:0 auto; float:right;}
+.pin-donation-home-contact img {position:relative; margin-top:-33.5%;}
+.pin-donation-footer h4.wp-block-heading {font-family:'Poppins', sans-serif;}
+.pin-donation-business-img img {width:100%;}
+.pin-donation-footer-column .wp-block-social-links li a {padding:12px; font-size:18px;}
+.pin-donation-page-outer{ position:relative;}
+.pin-donation-team-section2 h2 {font-family:'Poppins', sans-serif !important;}
+.pin-donation-archive-right li::marker, .pin-donation-blog-single-left-area li::marker {color:#282828;}
+.pin-donation-blog-area .wp-block-post-template li:nth-last-child(1) .wp-block-columns, .pin-donation-blog-left-side-area .wp-block-post-template li:nth-last-child(1) .wp-block-columns, .pin-donation-blog-right-side-page .wp-block-post-template li:nth-last-child(1) .wp-block-columns, .pin-donation-blog-no-sidebar .wp-block-post-template li:nth-last-child(1) .wp-block-columns {border:none; margin-bottom:0px; padding-bottom:0px !important;}
+.pin-donation-404 .wp-block-post-template li:nth-last-child(1) hr{ display:none !important;}
+.pin-donation-blog-area .wp-block-post-excerpin_donation__more-text, .pin-donation-blog-left-side-area .wp-block-post-excerpin_donation__more-text, .pin-donation-blog-right-side-page .wp-block-post-excerpin_donation__more-text, .pin-donation-blog-no-sidebar .wp-block-post-excerpin_donation__more-text, .pin-donation-archive-page .wp-block-post-excerpin_donation__more-text, .pin-donation-404 .wp-block-post-excerpin_donation__more-text{padding-top:15px !important;}
+.pin-donation-pricing-box .wp-block-heading, .pin-donation-counter-box .wp-block-heading{font-family:'Poppins', sans-serif !important;}
+.pin-donation-faq-tab .wp-block-details {border-radius:10px;}
+.pin-donation-landing-outer {position:relative;}
+
+.pin-donation-pricing-box h6.wp-block-heading sub {font-size:17px; position:relative; top:0px; font-weight: 400; left:5px;}
+
+.woocommerce div.product .product_title{ display: none;}
+.entry-summary .price {padding -bottom:15px !important;}
+.woocommerce div.product .quantity .qty {width:auto;}
+.cart {padding-bottom:20px !important;}
+.woocommerce div.product div.images img { width:auto !important; margin:0 auto;}
+.woocommerce-tabs .tabs.wc-tabs {margin:0px !important; padding:0px !important;}
+.woocommerce-tabs .tabs.wc-tabs:before{ border:none !important;}
+.woocommerce-tabs .woocommerce-Tabs-panel {font-size:20px; padding:40px !important; background-color: #f6f6f6;}
+.woocommerce div.product .woocommerce-tabs ul.tabs li{background:#222 !important; color:#fff !important; border-radius:0px !important; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li a{color:#fff; font-weight:400 !important;}
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before{ display:none;}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active, .woocommerce div.product .woocommerce-tabs ul.tabs li{ border:none !important; padding:5px 30px !important;}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active{ background:#ffac47 !important;}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover{color:#fff !important;}
+.related.products h2 {text-align:center;}
+.related.products li .price, .products li .price{ text-align:center;}
+.related.products .button, .products .button{display:table; margin:0 auto;}
+.related.products, .products{ text-align:center;}
+.related.products li, .products li{float:none !important; display:inline-block; margin:15px !important; padding:35px 15px 0px !important; border-radius: 5px !important;}
+.related.products li img, .products li img {width:auto !important; text-align:center; display:table !important; margin:0 auto !important; margin-bottom:20px !important;}
+.woocommerce div.product .related.products {padding:40px !important; background-color:#f6f6f6;}
+.qty.text {width:auto !important;}
+.woocommerce-account .wp-block-post-title, .woocommerce-account main .woocommerce, .woocommerce-cart .wp-block-post-title, .woocommerce-cart main .woocommerce, .woocommerce-checkout .wp-block-post-title, .woocommerce-checkout main .woocommerce {max-width:100%;}
+.woocommerce-product-gallery {align-items:center !important; display:flex !important; justify-content:center !important; height:350px;}
+.woocommerce-page .button {padding:10px 35px !important;}
+.woocommerce-Price-amount bdi {font-weight:600;}
+.select2-container--default .select2-selection--single, .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {border:1px solid #222; border-radius:0px;}
+
+body.home .pin-donation-menu li .wp-block-navigation__submenu-container li:nth-child(1) span:hover, body.home .pin-donation-menu li .wp-block-navigation__submenu-container li span:hover, .pin-donation-menu li .wp-block-navigation__submenu-container li span:hover {color:#f25f43;}
+.pin-donation-section10 .add_to_cart_button {border-radius:100px; background-color:#c28030; padding:12px 25px !important;}
+.added_to_cart.wc-forward {display:block;}
+.pin-donation-menu li a.current-menu-ancestor {color:#606060 !important;}
+.pin-donation-landing-content {position:absolute; left:50%; top: 50%; transform:translate(-50%,-50%);}
+.pin-donation-business-social {padding-left:50px;}
+.pin-donation-menu .wp-block-navigation ul li ul li a, body.home .pin-donation-menu li .wp-block-navigation__submenu-container li:nth-child(1) span, .pin-donation-menu li .wp-block-navigation__submenu-container li:nth-child(1) span{ border:none !important;}
+.pin-donation-copyright-right a{color:#cccccc;}
+.pin-donation-copyright-right a:hover{color:#282828 !important;}
+
+@media(max-width: 1440px){
+.pin-donation-section7-right .wp-block-image {position:relative; right:-114px;}
+.pin-donation-menu-section::before{ width:25%;}
+.pin-donation-team-section-box h2.wp-block-heading {font-size:18px !important; padding-bottom:10px !important;}
+.pin-donation-landing-content{ width:100% !important;}
+.pin-donation-banner {height:auto;}
+}
+
+@media(max-width: 1300px){
+.pin-donation-section7-right .wp-block-image{ right:-40px;}
+}
+
+@media(max-width: 1199px){
+.pin-donation-menu-section::before { display:none}
+.pin-donation-header-top-bar {padding:20px 15px !important;}
+.pin-donation-newletter-outer .wp-block-heading, .pin-donation-newletter-outer p {max-width:85% !important;}
+.pin-donation-banner {padding:0px 15px;}
+}
+
+@media(min-width: 1024px) and (max-width: 1200px){
+.woocommerce-page .button {padding:10px 25px !important;}
+.related.products li, .products li{margin:10px !important;}
+.pin-donation-post-section h2.wp-block-heading, .pin-donation-team-section h2.wp-block-heading{padding-right:270px !important; padding-left:270px !important}
+.pin-donation-safe-box {padding:35px 20px !important;}
+.pin-donation-offer-box {padding:30px 20px !important;}
+.pin-donation-pricing-box {padding:50px 30px !important;}
+.pin-donation-faq-section .wp-block-heading{padding:0px 30px 15px !important;}
+.pin-donation-contact-info-right {padding:50px !important;}
+.pin-donation-faq-list-box .wp-block-heading {padding-left:0px !important;}
+.pin-donation-contact-info-left h2.wp-block-heading {font-size:44px !important;}
+.pin-donation-team-circle-section .wp-block-image img{width:220px !important; height:220px !important; border-width:15px !important;}
+.pin-donation-testimonials-box {padding:25px 15px !important;}
+}
+
+@media(max-width: 1023px){
+.pin-donation-inner-banner h2.has-text-color, .pin-donation-inner-banner h1.has-text-color{padding-top:0px !important;}
+.pin-donation-banner-content h1 {font-size:22px !important; padding:0px !important;}
+.wp-block-image {margin:0px !important;}
+.pin-donation-header-top-bar-left {text-align:center; padding-bottom:25px;}
+.pin-donation-header-top-bar-left .wp-block-image {display:table; margin:0 auto !important; float:none !important; margin-bottom:10px !important; display:none;}
+.pin-donation-header-top-bar {padding-top:20px !important; padding-bottom:35px !important;}
+.pin-donation-section1 .wp-block-column {padding:0px 0px 10px;}
+.header-layout1, .header-layout2, .header-layout3, .header-layout4 {padding:20px 0px !important;}
+.header-layout3 .pin-donation-menu, .header-layout4 .pin-donation-menu{position:relative; right:0px; top:25px; padding:5px !important;}
+.pin-donation-404 .wp-block-search__inside-wrapper {width:100% !important;}
+.pin-donation-404 {padding:40px 15px !important;}
+.pin-donation-blog-area, .pin-donation-blog-right-side, .pin-donation-blog-left-side-page, .pin-donation-blog-no-sidebar, .pin-donation-archive-page {padding:40px 0px 40px !important;}
+.pin-donation-archive-page {padding:40px 15px !important;}
+.pin-donation-blog-content {padding-left:0px !important; padding-top:25px;}
+.pin-donation-blog-meta .wp-block-post-date, .pin-donation-blog-meta .wp-block-post-author, .pin-donation-blog-meta .wp-block-post-terms {width:100% !important; padding:0px !important;}
+.pin-donation-blog-left-side-area {padding-right:0px !important;}
+.pin-donation-blog-right-side-page{ padding-left:0px !important;}
+.pin-donation-contact-lay1, .pin-donation-contact-lay2-box{padding:40px 15px !important;}
+.pin-donation-contact-lay1 .wp-block-group{ padding-right:0px !important;}
+.pin-donation-contact-lay1 .pin-donation-contact-info{ padding-top:40px;}
+.pin-donation-contact-info-box {padding:30px !important;}
+.pin-donation-service-single-lay{padding:40px 0px 0px !important;}
+.pin-donation-service-menu {padding-right:0px !important; padding-bottom:40px;}
+.pin-donation-service-single-lay h2 {font-size:24px !important;}
+.pin-donation-team-section1 {padding:40px 0px 40px !important;}
+.pin-donation-team-section1-right{ padding-top:40px;}
+.pin-donation-team-section1 .wp-block-columns{ padding-bottom:40px !important;}
+.pin-donation-team-section2{ padding-top:0px !important; padding-bottom:0px !important; padding-right:0px !important; padding-left:0px !important;}
+.pin-donation-team-section-box {margin-bottom:30px !important; padding-right:0px !important;}
+.pin-donation-page-outer {padding:0px 15px !important;}
+.pin-donation-archive-left {padding-right:0px !important;}
+.pin-donation-inner-banner-title {font-size:26px !important; margin:0px !important;}
+.pin-donation-blog-single-area {padding:40px 15px !important;}
+.pin-donation-blog-single-right-area {padding-left:0px !important; padding-top:40px;}
+.pin-donation-section9 .wp-block-buttons {margin-top:30px !important;}
+.pin-donation-inner-banner .wp-block-cover {min-height:220px !important;}
+.pin-donation-404 h1{padding-bottom:30px !important; font-size:30px !important;}
+.related.products li, .products li{width:100% !important; margin:0 auto !important;}
+.pin-donation-section5-menu-box .wp-block-column {text-align:center;}
+.pin-donation-section5-left::after{ display:none;}
+.pin-donation-section5-left, .pin-donation-section5-right{ padding:0px !important;}
+.pin-donation-business-social .wp-block-social-links{display:inline-block; margin:0px;}
+.pin-donation-business-social .wp-block-social-links li {display:inline-block;}
+.pin-donation-blog-right-side-area {padding-top:40px;}
+.pin-donation-landing-content h4.wp-block-heading, .pin-donation-landing-content p{ max-width:100% !important;}
+.pin-donation-testimonials .wp-block-columns {padding:60px 0px 30px !important;}
+.pin-donation-testimonials .wp-block-columns:nth-last-child(1) {padding-top:0px !important; padding-bottom:60px !important;}
+.pin-donation-testimonials {padding-top:0px !important;}
+.pin-donation-testimonials-box .wp-block-columns {padding:0px !important;}
+.pin-donation-call-action-outer {padding:50px 15px !important; margin:60px 0px !important;}
+.pin-donation-logo-outer {padding:60px 0px !important;}
+.pin-donation-logo-area .wp-block-column {padding:25px 0px !important;}
+.pin-donation-pricing-section .wp-block-heading {padding:0px !important; padding-bottom:30px !important;}
+.pin-donation-pricing-box .wp-block-heading {padding-bottom:15px !important;}
+.pin-donation-faq-section .wp-block-heading {padding:0px !important; padding-bottom:0px !important;}
+.pin-donation-counter-section .wp-block-heading {padding:0px !important; padding-bottom:35px !important;}
+.pin-donation-team-section .wp-block-heading, .pin-donation-post-section .wp-block-heading {padding:0px !important; padding-bottom:30px !important;}
+.pin-donation-feature-list {padding:60px 0px 60px !important;}
+.pin-donation-feature-list-content{ padding-top:60px !important;}
+.pin-donation-team-section .wp-block-column h4.wp-block-heading {padding-top:20px !important; padding-bottom:0px !important;}
+.pin-donation-statement {padding:60px 15px !important;}
+.pin-donation-pricing-section {padding:60px 0px;}
+.pin-donation-faq-section {padding:60px 0px;}
+.pin-donation-counter-section {padding:60px 15px;}
+.pin-donation-404 .wp-block-column {padding:0px !important;}
+.pin-donation-404 .wp-block-column h2.has-text-color{padding-bottom:0px !important; padding-top:25px !important;}
+.pin-donation-contact-info-left, .pin-donation-contact-info-right {margin:40px 0px !important;}
+.pin-donation-contact-info-right {padding:35px 25px !important;}
+.pin-donation-contact-box {padding:25px 0px !important;}
+.pin-donation-contact-info-right .pin-donation-contact-box {padding:25px 0px !important;}
+.pin-donation-faq-section.pin-donation-faq-list-section {padding:60px 0px !important;}
+.pin-donation-faq-list-box {max-width:90% !important; margin-top:20px !important; padding:30px 30px !important;}
+.pin-donation-faq-list-box h5.wp-block-heading{padding-bottom:10px !important;}
+.pin-donation-faq-list-box .wp-block-separator{ margin:15px 0px !important}
+.pin-donation-author-page {padding:40px 15px 0px !important; margin:40px 0px !important;}
+.pin-donation-team-circle-section .pin-donation-header-social {width:100% !important; padding:0px;}
+.pin-donation-team-circle-section .wp-block-group:nth-last-child(1) .pin-donation-header-social {padding-bottom: 0px !important;}
+.pin-donation-business-img {padding:0px 15px !important;}
+.pin-donation-business-social {padding-left:0px;}
+.pin-donation-header-social {width: auto; margin:0 auto; display:table;}
+.pin-donation-testimonials-box .wp-block-columns:nth-last-child(1) {padding-bottom:0px !important;}
+.pin-donation-copyright-left p, .pin-donation-copyright-right p {text-align:center;}
+.pin-donation-counter-box h2.wp-block-heading {font-size:50px !important; padding-bottom:10px !important;}
+.pin-donation-post-section {padding:60px 0px !important;}
+}
+
+@media(min-width: 768px) and (max-width: 1023px){
+.pin-donation-header-top-bar {padding:20px 15px !important;}
+.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column.pin-donation-header-top-bar-left, .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column.pin-donation-header-top-bar-logo, .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column.pin-donation-header-top-bar-right {flex-basis:auto !important; width:33.33%; float:left; padding:0px !important;}
+
+.pin-donation-coffee-beans .wp-block-image{width:140px; height:140px;}
+.pin-donation-header-top-bar-right .wc-block-mini-cart.wp-block-woocommerce-mini-cart {padding:0px;}
+.pin-donation-banner-content .wp-block-heading {padding:0px !important; font-size:50px !important;}
+.pin-donation-contact-box .wp-block-image{ padding-bottom:15px;}
+.pin-donation-post-section h2.wp-block-heading, .pin-donation-team-section h2.wp-block-heading{padding-right:0px !important; padding-left:0px !important; padding-bottom:35px !important;}
+.pin-donation-images-box-section .wp-block-column {padding:15px 0px;}
+.pin-donation-section2-right {padding-top:40px;}
+.pin-donation-offer-box {padding:30px 20px !important;}
+.pin-donation-logo {text-align:center !important;}
+.pin-donation-image-box .wp-block-image{margin-bottom:25px !important;}
+.pin-donation-images-box-section .wp-block-columns .wp-block-column {padding:15px 0px;}
+.pin-donation-images-box-section .wp-block-columns {padding:25px 0px !important;}
+.pin-donation-section2 .wp-block-columns {padding:40px 0px !important;}
+.pin-donation-section2-right {padding-top:40px !important;}
+.pin-donation-section3 {padding:40px 15px 0px !important;}
+.pin-donation-section3 .wp-block-columns {padding-bottom:20px 0px 40px !important;}
+.pin-donation-section3 .wp-block-columns:nth-last-child(1) {padding-bottom:40px !important;}
+.pin-donation-section4{ padding:0px !important;}
+.pin-donation-section4 .wp-block-columns {padding:40px 15px !important;}
+.pin-donation-post-section{ padding:20px 15px !important;}
+.pin-donation-safe-box {padding:30px !important;}
+.pin-donation-team-section {padding-top:40px !important; padding-bottom:0px !important;}
+.pin-donation-post-section h4 {font-size:22px !important;}
+.pin-donation-contact-section .wp-block-columns {padding:0px 0px !important;}
+.pin-donation-home-contact {padding-top:50px;}
+.pin-donation-footer .wp-block-columns{ padding:0px 0px 20px;}
+.pin-donation-footer {padding:0px 15px 0px !important;}
+.pin-donation-post-section .wp-block-post-date{padding-top: 20px !important;}
+.pin-donation-team-section .wp-block-column .wp-block-heading.has-text-align-center.has-primary-color.has-text-color {margin-bottom:0px !important; padding:0px !important; margin-top:20px;}
+.pin-donation-contact-box {padding-right:0px !important;}
+.pin-donation-contact-box .wp-block-image{ padding-bottom:15px;}
+.pin-donation-team-section .wp-block-group:nth-last-child(1) {padding-bottom:40px !important;}
+.pin-donation-team-section .wp-block-group:nth-last-child(1) .wp-block-columns {gap:15px !important;}
+.pin-donation-contact-section-left {padding-top:40px !important;}
+.pin-donation-menu .wp-block-navigation__container li {padding:0px 0px; padding-bottom:0px;}
+.pin-donation-blog-content-box {padding:30px 10px !important;}
+.pin-donation-blog-content-box h4{ font-size:20px !important}
+.pin-donation-blog-content-box .wp-block-post-date {padding-top:0px !important;}
+.pin-donation-banner {padding:0px 15px;}
+.pin-donation-pricing-section {padding:60px 0px !important;}
+.pin-donation-testimonials:nth-child(1) {padding-bottom:0px !important;}
+.pin-donation-home-contact {height:100%; bottom:0%; width:100%; padding-top:30px !important;}
+.pin-donation-post-section {padding:40px 15px 80px !important;}
+.pin-donation-post-section .wp-block-buttons {margin-top:20px !important;}
+.pin-donation-topbar{padding:8px 15px !important;}
+.pin-donation-topbar .wp-block-column-is-layout-flow{flex-basis: 80% !important;}
+.pin-donation-mail .wp-block-image{margin-right:15px !important;}
+}
+
+@media(min-width: 781px) and (max-width: 1023px){
+.pin-donation-menu .wp-container-4.wp-container-4 {gap:20px !important;}	
+.pin-donation-header-social .wp-container-7.wp-container-7 {gap:5px;}
+.pin-donation-banner {padding:0px 15px;}
+.pin-donation-section4 h2.has-text-color {font-size:36px !important;}
+.pin-donation-section2-right h2.has-text-color {padding-bottom:20px !important;}
+.pin-donation-team-section .wp-block-column h4.wp-block-heading{font-size:18px !important;}
+.pin-donation-contact-section-left h2.has-text-color {font-size:36px !important; padding-bottom:0px !important;}
+.pin-donation-section2-right {padding-top:0px !important;}
+.pin-donation-testimonials-box {padding:20px 15px !important;}
+.pin-donation-testimonials .wp-block-columns {gap:10px !important;}
+.pin-donation-testimonials-box .wp-block-columns:nth-last-child(1) {padding-bottom:0px !important;}
+.pin-donation-logo h1 {font-size:26px !important;}
+.pin-donation-author-page .pin-donation-team-section1-right {padding-top:0px !important;}
+.pin-donation-team-circle-section .wp-block-image img{width:170px !important; height:170px !important; border-width:15px !important;}
+.pin-donation-menu{padding-top:5px;}
+.pin-donation-section1 {padding:15px!important;}
+.pin-donation-section1 .wp-block-column {padding:0 0 0px;}
+.pin-donation-home-contact {height:80%; bottom:-20%;}
+.pin-donation-section1 .wp-block-column-is-layout-flow:nth-of-type(3){flex-basis: 21% !important;} 
+.pin-donation-section1 .wp-block-column-is-layout-flow:nth-of-type(1){flex-basis: 16% !important;} 
+.pin-donation-menu{padding-top:12px !important;}
+}
+
+@media(min-width: 600px) and (max-width: 1023px){
+.pin-donation-section8-product-box ul li, .pin-donation-section4-product-box ul li, .pin-donation-section9 ul li {width:calc(50% - .9375em) !important;}
+.pin-donation-section-box {padding:80px 100px 200px !important;}
+.pin-donation-post-section .wp-block-post-template li {text-align:left;}
+.pin-donation-page-outer h2.wp-block-heading{font-size: 40px !important;}
+}
+
+@media(min-width: 1024px) and (max-width: 1440px){
+.pin-donation-blog-content h2 {font-size:24px !important;}
+.pin-donation-coffee-beans h3 {width:100%;}
+.pin-donation-section7-left .wp-block-group {padding:0px !important;}
+.pin-donation-section7-left .wp-block-columns {padding:0px !important;}
+.pin-donation-section7-left h2{ padding:0px !important;}
+.pin-donation-section1-left p {padding-top:0px !important;}
+.pin-donation-section7-left {padding:40px 15px 0px !important;}
+.wp-block-group .pin-donation-section7-testimonial-box {padding:20px 25px !important; margin-top: 30px !important;}
+.wp-block-group .pin-donation-section7-testimonial-box p{ font-size:16px !important; padding-bottom:10px !important;}
+.pin-donation-section-box{padding-right:30px !important; padding-left:30px !important;}
+.pin-donation-section8 h2{font-size: 46px !important;}
+.pin-donation-banner-content h1{font-size:50px !important;}
+.pin-donation-header-top-bar-left .wp-block-image {margin:0px !important;}
+.pin-donation-404 h3.has-text-color {font-size:80px !important;}
+.pin-donation-banner-content .wp-block-heading{padding:0px 200px !important;}
+.pin-donation-team-circle-section .wp-block-columns{gap:10px !important;}
+}
+
+@media(max-width: 767px){
+.pin-donation-image-box h4{padding-left:0px !important; padding-right:0px !important;}	
+.pin-donation-banner::before {display:none;}
+.pin-donation-banner {padding:0px 0px 0px !important;}
+.pin-donation-banner-content .wp-block-buttons{margin-top:10px !important;}
+.pin-donation-banner-content .wp-block-buttons .wp-element-button{ padding:8px 20px !important; margin-top:10px;}
+.pin-donation-logo {text-align:center !important;}
+.pin-donation-image-box .wp-block-image{margin-bottom:5px !important;}
+.pin-donation-images-box-section .wp-block-columns .wp-block-column {padding:15px 0px;}
+.pin-donation-images-box-section .wp-block-columns {padding:25px 0 0 0px !important;}
+.pin-donation-section2 .wp-block-columns {padding:0px !important;}
+.pin-donation-section2-right {padding-top:40px !important;}
+.pin-donation-section3 {padding:40px 15px 0px !important;}
+.pin-donation-section3 .wp-block-columns {padding-bottom:20px 0px 40px !important;}
+.pin-donation-section3 .wp-block-columns:nth-last-child(1) {padding-bottom:40px !important;}
+.pin-donation-section4{ padding:0px !important;}
+.pin-donation-section4 .wp-block-columns {padding:40px 15px !important;}
+.pin-donation-post-section{ padding:20px 15px !important;}
+.pin-donation-safe-box {padding:30px !important;}
+.pin-donation-team-section {padding-top:40px !important; padding-bottom:0px !important;}
+.pin-donation-offer-box {padding:40px 20px !important;}
+.pin-donation-post-section h4 {font-size:26px !important;}
+.pin-donation-contact-section .wp-block-columns {padding:40px 0px 0px !important;}
+.pin-donation-home-contact {padding-top:40px;}
+.pin-donation-footer .wp-block-columns{ padding:40px 0px 20px !important;}
+.pin-donation-footer {padding:20px 15px 0px !important;}
+.pin-donation-post-section .wp-block-post-date{padding-top: 20px !important;}
+.pin-donation-team-section .wp-block-column .wp-block-heading.has-text-align-center.has-primary-color.has-text-color {margin-bottom:0px !important; padding:0px !important; margin-top:20px;}
+.pin-donation-banner h2.has-text-color {padding:0px !important; font-size:26px !important; width:75%;}
+.pin-donation-contact-box {padding-right:0px !important;}
+.pin-donation-contact-box .wp-block-image{ padding-bottom:15px;}
+.pin-donation-team-section .wp-block-group:nth-last-child(1) {padding-bottom:40px !important;}
+.pin-donation-section1 {padding:15px 0px !important;}
+.pin-donation-contact-box {padding-top:0px !important;}
+.pin-donation-team-section-box h2.wp-block-heading {font-size:18px !important; padding-bottom:10px !important;}
+.pin-donation-banner img{ margin-top:0px;}
+.pin-donation-service-menu {padding:0px !important;}
+.pin-donation-service-content {padding-top:40px !important;}
+.pin-donation-landing-content{ width:100% !important;}
+.pin-donation-landing-content h4.wp-block-heading, .pin-donation-landing-content p{font-size:30px !important; max-width:100% !important; margin-top:20px !important;}
+.pin-donation-landing-content p {font-size:18px !important; margin-top:0px !important;}
+.pin-donation-testimonials .wp-block-columns {padding:40px 0px !important;}
+.pin-donation-testimonials {padding-top:0px !important; padding-bottom:0px !important;}
+.pin-donation-testimonials-box .wp-block-columns {padding:0px !important;}
+.pin-donation-call-action-outer {padding:50px 15px !important; margin-top:40px !important;}
+.pin-donation-logo-outer {padding:40px 0px !important;}
+.pin-donation-logo-area .wp-block-column {padding:25px 0px !important;}
+.pin-donation-feature-list {padding:40px 0px 40px !important;}
+.pin-donation-feature-list-content{ padding-top:40px !important;}
+.pin-donation-statement {padding:40px 15px !important;}
+.pin-donation-pricing-section {padding:40px 0px;}
+.pin-donation-faq-section {padding:40px 0px;}
+.pin-donation-page-outer {padding:0px 15px !important;}
+.pin-donation-newletter-outer .wp-block-heading, .pin-donation-newletter-outer p {max-width:100% !important;}
+.pin-donation-newletter-outer .wp-block-heading{ font-size:32px !important; line-height:normal !important;}
+.pin-donation-landing-outer {padding:40px 15px !important;}
+.pin-donation-inner-banner h2.has-text-color {font-size:26px !important; padding-bottom:0px !important;}
+.pin-donation-faq-section.pin-donation-faq-list-section {padding:40px 0px !important;}
+.pin-donation-faq-list-box {max-width:100% !important; margin-top:20px !important; padding:30px 30px !important;}
+.pin-donation-faq-list-box h5.wp-block-heading{padding-bottom:10px !important;}
+.pin-donation-faq-list-box .wp-block-separator{ margin:15px 0px !important}
+.pin-donation-blog-content-box {padding:30px 10px !important;}
+.pin-donation-blog-content-box h4{ font-size:22px !important}
+.pin-donation-section2, .pin-donation-section4, .pin-donation-post-section, .pin-donation-contact-section{text-align:center;}
+.pin-donation-section2 .wp-block-button{ display:table; margin:0 auto;}
+.pin-donation-pricing-section {padding:40px 0px !important;}
+.pin-donation-post-section {padding:40px 15px 80px !important;}
+.pin-donation-post-section .wp-block-buttons {margin-top:20px !important;}
+.pin-donation-home-contact {height:100%; bottom:0%; width:100%; padding-top:30px !important;}
+.pin-donation-home-contact img{ margin-top:0%;}
+.pin-donation-lists{padding:5px 0 !important;}
+.pin-donation-lists:last-of-type{margin-bottom:30px;}
+.pin-donation-lists figure{margin-right:15px !important;}
+.pin-donation-section2-right .wp-block-group.is-vertical{margin-bottom:30px;}
+.pin-donation-section3 .wp-block-image.alignright{margin-top:35px !important;}
+.pin-donation-section4 .wp-block-group.is-vertical{padding:0px !important;}
+.pin-donation-section4 h2{font-size:35px !important;}
+.pin-donation-section4 h4{padding-top:35px;}
+.pin-donation-section4 .wp-block-column-is-layout-flow{padding:0px !important;}
+.entry-content{padding:20px 0;}
+}
+
+@media(min-width: 600px) and (max-width: 799px){
+.pin-donation-header .wp-block-navigation__submenu-container {right:-1px !important; left:auto !important;}
+}
+
+@media(max-width: 599px){
+h2.has-text-color {font-size:30px !important; padding-bottom:20px !important;}
+h3.has-text-color {font-size:20px !important;}
+h4.has-text-color {font-size:22px !important;}
+h5.has-text-color {font-size:18px !important;}
+.pin-donation-menu {position:relative; right:0px; top:0px;}
+.pin-donation-menu .wp-block-navigation ul{display: block !important; width: 100%; text-align: right; min-width:310px !important; padding-left:0px !important;}
+.wp-block-navigation__submenu-container li {padding-right:0px !important;}
+.pin-donation-menu .wp-block-navigation ul li{display:block !important; margin-bottom:0px;padding:5px 0px; padding-right:25px;}
+.pin-donation-menu .wp-block-navigation__submenu-container {padding-right:0px !important;}
+.pin-donation-menu .wp-block-navigation ul li a{ line-height:normal !important;}
+.pin-donation-menu .wp-block-navigation__submenu-container li a{ text-align:right; display:inherit !important;}
+.pin-donation-menu .wp-block-navigation__submenu-container{ padding-top:20px !important;}
+.pin-donation-menu .wp-block-navigation__submenu-container li {border:none !important;}
+.pin-donation-menu .wp-block-navigation__responsive-container-open:hover {background:none;}
+.pin-donation-menu .wp-block-navigation__responsive-container-open svg{width:35px; height:35px;}
+.pin-donation-menu .wp-block-navigation.items-justified-right{ padding-top:0px;}
+.pin-donation-menu .current-menu-item a, .pin-donation-menu li a:hover {color:#edf1f0 !important; background:none !important;}
+.pin-donation-menu .is-layout-constrained {padding:5px !important;}
+.pin-donation-banner h2 {padding:0px !important;}
+.pin-donation-images-box-section {padding:0px;}
+.pin-donation-testimonials-box {padding:40px 30px !important;}
+.pin-donation-counter-section {padding:40px 15px;}
+.pin-donation-menu .wp-block-navigation__responsive-container-content .current-menu-item a, .pin-donation-menu .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container li a:hover, .pin-donation-menu .wp-block-navigation__responsive-container-content .wp-block-navigation .wp-block-navigation-item__label:hover, .pin-donation-menu .wp-block-navigation__responsive-container-content a.wp-block-navigation-item__content:hover {color:#606060 !important;}
+.pin-donation-menu .wp-block-navigation__responsive-container button {padding-right:20px !important;}
+.pin-donation-menu .wp-block-navigation__responsive-dialog{margin-top:15px !important;}
+.pin-donation-blog-single-left-area h2.has-text-color {padding-bottom:0px !important;}
+.pin-donation-pricing-box {padding:20px !important;}
+.pin-donation-list-sec{padding:20px 0px !important;}
+.pin-donation-list-sec .wp-block-columns {padding:20px 0px !important;}
+.pin-donation-contact-info-right {padding:0px 30px !important;}
+.pin-donation-menu .wp-block-navigation ul li a {border:none !important;}
+.wp-block-navigation .wp-block-navigation-item ul li a:hover, .wp-block-navigation .wp-block-navigation-item ul li.current-menu-item a, .wp-block-navigation .wp-block-navigation-item ul li a:hover span, body.home .pin-donation-menu li .wp-block-navigation__submenu-container li:nth-child(1):hover span{background:none !important;}
+
+.wp-block-navigation .wp-block-navigation-item ul li a:hover, .wp-block-navigation .wp-block-navigation-item ul li.current-menu-item a, .wp-block-navigation .wp-block-navigation-item ul li a:hover span, body.home .pin-donation-menu li .wp-block-navigation__submenu-container li:nth-child(1):hover span, .wp-block-navigation .wp-block-navigation-item ul li a:hover span, body.home .pin-donation-menu li .wp-block-navigation__submenu-container li:nth-child(1):hover span {color:#1b1b1b !important;}
+
+header .wp-block-social-links{display:table !important; margin:10px auto 0 auto!important; text-align:center;}
+.pin-donation-mail{justify-content: center !important;}
+.pin-donation-mail .wp-block-image{margin-right:15px !important;}
+}

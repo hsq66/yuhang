@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.4/theme.json",
+	"version": 2,
+	"title": "Orange",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#080808",
+					"name": "Color 1",
+					"slug": "custom-color-1"
+				},
+				{
+					"color": "#fde4cf",
+					"name": "Color 2",
+					"slug": "custom-color-2"
+				},
+				{
+					"color": "#202020",
+					"name": "Color 3",
+					"slug": "custom-color-3"
+				},
+				{
+					"color": "#8c8c8c",
+					"name": "Color 4",
+					"slug": "custom-color-4"
+				},
+				{
+					"color": "#fccdae",
+					"name": "Color 5",
+					"slug": "custom-color-5"
+				}
+			]	
+		}
+	}
+}
