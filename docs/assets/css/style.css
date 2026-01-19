@@ -1,0 +1,434 @@
+/*
+Theme Name: WENS Track - 宇航金属钣金制造
+Theme URI: https://wensolutions.com/themes/wens-track/
+Template: wens-haelo
+Author: WEN Solutions
+Author URI: https://wensolutions.com/
+Description: 广东宇航金属制品有限公司官方网站主题。专业钣金加工、精密钣金制造、金属冲压、激光切割、钣金折弯、焊接加工服务。现代化、轻量级的全站编辑(FSE)主题，专为钣金制造行业设计。完全响应式、SEO优化、移动端友好，提供专业的企业展示解决方案。适用于钣金加工企业、金属制品制造商、精密加工服务商等。主题包含预定义的行业布局和区块模式，易于创建专业的企业网站。符合最新WordPress标准，确保长期稳定性、流畅性能和主流插件兼容性。简洁、优雅的设计强调可读性和用户体验，让您的产品和服务成为焦点。
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, blog, portfolio, business, manufacturing, metal-fabrication
+Text Domain: wens-track
+Requires at least: 6.0
+Requires PHP: 7.4
+Tested up to: 6.8
+Version: 1.0.3
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* ========================================
+   全局颜色系统 - 统一协调
+   ======================================== */
+
+:root {
+    /* 主色调 */
+    --color-primary: #091057;
+    --color-primary-light: #1a1f7a;
+    --color-primary-dark: #050833;
+    
+    /* 次要色 */
+    --color-secondary: #024caa;
+    --color-secondary-light: #1565c0;
+    --color-secondary-dark: #013d8a;
+    
+    /* 强调色 */
+    --color-accent: #f59e0b;
+    --color-accent-light: #fbbf24;
+    --color-accent-dark: #d97706;
+    
+    /* 文字颜色 */
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #4a4a4a;
+    --color-text-tertiary: #6b6b6b;
+    --color-text-light: #8a8a8a;
+    
+    /* 背景颜色 */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f9fafb;
+    --color-bg-tertiary: #f3f4f6;
+    
+    /* 边框颜色 */
+    --color-border-light: #e5e7eb;
+    --color-border-medium: #d1d5db;
+    --color-border-dark: #9ca3af;
+    
+    /* 状态颜色 */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+}
+
+/* ========================================
+   全局文字颜色优化
+   ======================================== */
+
+body {
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 标题颜色 */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primary);
+}
+
+/* 段落文字 */
+p {
+    color: var(--color-text-secondary);
+}
+
+/* 链接颜色 */
+a {
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* 次要文字 */
+.wp-block-post-date,
+.wp-block-post-author-name,
+small,
+.caption {
+    color: var(--color-text-light);
+}
+
+/* ========================================
+   全局图片优化 - 统一样式
+   ======================================== */
+
+/* 所有图片基础样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* 文章特色图片 */
+.wp-block-post-featured-image img {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wp-block-post-featured-image:hover img {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 图片区块 */
+.wp-block-image img {
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.wp-block-image.alignfull img,
+.wp-block-image.alignwide img {
+    border-radius: 0;
+}
+
+/* 图库图片 */
+.wp-block-gallery img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.wp-block-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Logo图片 */
+.wp-block-site-logo img {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* 头像图片 */
+.avatar,
+.wp-block-avatar img {
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   按钮颜色统一
+   ======================================== */
+
+.wp-block-button__link,
+.wp-element-button,
+.wpcf7-submit {
+    background: var(--color-secondary);
+    color: #ffffff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.wp-block-button__link:hover,
+.wp-element-button:hover,
+.wpcf7-submit:hover {
+    background: var(--color-accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
+}
+
+/* 次要按钮 */
+.wp-block-button.is-style-outline .wp-block-button__link {
+    background: transparent;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background: var(--color-secondary);
+    color: #ffffff;
+}
+
+/* ========================================
+   卡片统一样式
+   ======================================== */
+
+.wp-block-group {
+    border-radius: 12px;
+}
+
+/* 白色卡片 */
+.wp-block-group[style*="background:#fff"],
+.wp-block-group[style*="background: #fff"],
+.wp-block-group[style*="background:white"] {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--color-border-light);
+}
+
+/* ========================================
+   表单元素颜色
+   ======================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+    border: 1px solid var(--color-border-medium);
+    color: var(--color-text-primary);
+    background: var(--color-bg-primary);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(2, 76, 170, 0.1);
+}
+
+/* ========================================
+   导航菜单颜色
+   ======================================== */
+
+.wp-block-navigation-item a {
+    color: var(--color-text-primary);
+}
+
+.wp-block-navigation-item a:hover,
+.wp-block-navigation-item.current-menu-item a {
+    color: var(--color-secondary);
+}
+
+/* ========================================
+   页脚颜色
+   ======================================== */
+
+#footer {
+    background: var(--color-primary);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer h5,
+#footer h6 {
+    color: #ffffff;
+}
+
+#footer a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#footer a:hover {
+    color: var(--color-accent);
+}
+
+/* ========================================
+   钣金行业专业优化样式
+   ======================================== */
+
+/* 工业风格色彩增强 */
+body {
+    text-rendering: optimizeLegibility;
+}
+
+/* 行业特色标题样式 */
+.industry-title {
+    position: relative;
+    padding-left: 20px;
+}
+
+.industry-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 80%;
+    background: linear-gradient(180deg, var(--color-secondary), var(--color-accent));
+    border-radius: 2px;
+}
+
+/* 产品展示优化 */
+.product-showcase {
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border-light);
+    border-radius: 12px;
+}
+
+.product-showcase:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--color-secondary);
+}
+
+/* 服务项目卡片 */
+.service-card {
+    background: var(--color-bg-primary);
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border-light);
+}
+
+.service-card:hover {
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+    box-shadow: 0 8px 24px rgba(9, 16, 87, 0.1);
+    border-color: var(--color-secondary);
+}
+
+/* 质量认证徽章 */
+.quality-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 技术参数表格优化 */
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.specs-table th,
+.specs-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.specs-table th {
+    background: var(--color-bg-secondary);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* 联系表单专业化 */
+.contact-form-professional input,
+.contact-form-professional textarea,
+.contact-form-professional select {
+    border: 2px solid var(--color-border-light);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form-professional input:focus,
+.contact-form-professional textarea:focus,
+.contact-form-professional select:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(2, 76, 170, 0.1);
+}
+
+/* ========================================
+   响应式图片优化
+   ======================================== */
+
+@media (max-width: 768px) {
+    img {
+        border-radius: 10px;
+    }
+    
+    .wp-block-post-featured-image img {
+        border-radius: 12px;
+    }
+}
+
+/* ========================================
+   无障碍优化
+   ======================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* 焦点可见性 */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   打印优化
+   ======================================== */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+
