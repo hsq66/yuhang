@@ -27,8 +27,8 @@
 <meta name="geo.placename" content="广东">
 <link rel="preload" as="image" href="wp-content/themes/wens-haelo/screenshot.png" fetchpriority="high">
     <style id="critical-css">
-        /* 简洁现代样式 */
-        *{box-sizing:border-box;margin:0;padding:0}
+        /* 简洁现代样式 - 完全禁用动画 */
+        *{box-sizing:border-box;margin:0;padding:0;animation:none!important;transition:none!important;transform:none!important}
         body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#333;background:#fff;line-height:1.6}
         
         /* 顶部联系栏 - 简洁深色 */
@@ -37,24 +37,26 @@
         .mobile-disable.has-custom-color-1-background-color .wp-block-group{justify-content:center!important}
         .mobile-disable.has-custom-color-1-background-color p,.mobile-disable.has-custom-color-1-background-color strong,.mobile-disable.has-custom-color-1-background-color a{color:#fff!important;font-size:13px!important}
         
-        /* Header容器固定 */
-        header.wp-block-template-part{position:fixed!important;top:0;left:0;right:0;width:100%;z-index:99999!important;background:#fff}
+        /* Header容器固定 - 确保可点击 */
+        header.wp-block-template-part{position:fixed!important;top:0;left:0;right:0;width:100%;z-index:999999!important;background:#fff;pointer-events:auto!important}
         
-        /* 导航栏 */
-        #header{background:#fff;border-bottom:1px solid #e5e5e5;padding:12px 40px!important;position:relative;z-index:100000!important}
+        /* 导航栏 - 确保可点击 */
+        #header{background:#fff;border-bottom:1px solid #e5e5e5;padding:12px 40px!important;position:relative;z-index:1000000!important;pointer-events:auto!important}
+        #header *{pointer-events:auto!important}
         #header .wens-prova-nav{padding:0!important}
         #header .wp-block-group{padding:0!important;margin:0!important}
         #header .wp-block-site-logo img{width:45px!important;height:45px!important}
         #header .wp-block-site-title{font-size:18px!important;font-weight:600!important;margin:0!important}
         #header nav{font-size:14px!important}
+        #header a{pointer-events:auto!important;cursor:pointer!important}
         
-        /* 给main添加margin避免被遮挡 */
+        /* Main内容区 */
         main{margin-top:0!important;position:relative;z-index:1!important;padding-top:0!important}
         
-        /* Hero区域 - 无动画干净 */
+        /* Hero区域 - 完全禁用动画和变换 */
         .wp-block-cover{position:relative;overflow:hidden;margin:0!important;z-index:1!important}
-        .wp-block-cover *{animation:none!important;transition:none!important;transform:none!important}
-        .wp-block-cover__image-background{object-fit:cover}
+        .wp-block-cover,.wp-block-cover *{animation:none!important;transition:none!important;transform:none!important;will-change:auto!important}
+        .wp-block-cover__image-background{object-fit:cover;animation:none!important;transform:none!important}
         
         /* 通用样式 */
         img{max-width:100%;height:auto;display:block}
@@ -63,11 +65,10 @@
         h2{font-size:28px}
         h3{font-size:24px}
         p{color:#666;margin-bottom:16px}
-        a{color:#0066cc;text-decoration:none;transition:color 0.2s}
+        a{color:#0066cc;text-decoration:none}
         a:hover{color:#004499}
         
         .wp-block-button__link{background:linear-gradient(135deg,#0066cc 0%,#004499 100%);color:#fff;padding:12px 28px;border-radius:6px;font-weight:500;border:none;display:inline-block}
-        .wp-block-button__link:hover{background:linear-gradient(135deg,#004499 0%,#0066cc 100%)}
         
         /* Footer */
         #footer{background:#1a1a2e;color:#fff;padding:40px 20px!important}
